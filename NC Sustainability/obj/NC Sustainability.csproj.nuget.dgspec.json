@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Downloads\\ncsustain\\NC Sustainability\\NC Sustainability.csproj": {}
+    "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Downloads\\ncsustain\\NC Sustainability\\NC Sustainability.csproj": {
+    "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\ncsustain\\NC Sustainability\\NC Sustainability.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj",
         "projectName": "NC Sustainability",
-        "projectPath": "C:\\Users\\Administrator\\Downloads\\ncsustain\\NC Sustainability\\NC Sustainability.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Downloads\\ncsustain\\NC Sustainability\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
