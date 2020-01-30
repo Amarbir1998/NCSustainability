@@ -1,0 +1,60 @@
+C:\Users\Administrator\Desktop\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.deps.json
+C:\Users\Administrator\Desktop\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.runtimeconfig.json
+C:\Users\Administrator\Desktop\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.dll
+C:\Users\Administrator\Desktop\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.pdb
+C:\Users\Administrator\Desktop\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.Views.dll
+C:\Users\Administrator\Desktop\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.Views.pdb
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.TagHelpers.input.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.TagHelpers.output.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorCoreGenerate.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorTargetAssemblyInfo.cs
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.Views.pdb
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.dll
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.pdb
+C:\Users\Administrator\Desktop\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.CopyComplete
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.deps.json
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.runtimeconfig.json
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.runtimeconfig.dev.json
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.dll
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.pdb
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.Views.dll
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.Views.pdb
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.TagHelpers.input.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.TagHelpers.output.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorCoreGenerate.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorTargetAssemblyInfo.cs
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.Views.pdb
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.dll
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.pdb
+C:\Users\Administrator\Downloads\ncsustain\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.CopyComplete
