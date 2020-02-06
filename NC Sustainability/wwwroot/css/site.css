@@ -1,70 +1,72 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/*Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets.*/
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 hr.new1 {
     border-top: #A9A9A9;
 }
 
-.image {
-    height: 15px;
-    width: 15px;
+
+
+
+/*Sticky footer styles
+--------------------------------------------------*/
+html {
+    font-size: 14px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/*Sticky footer styles
+--------------------------------------------------*/
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+    /*Margin bottom by footer height*/
+    margin-bottom: 60px;
 }
 
-html, body, div,  h1, h2, h3, h4, h5, h6, p, ol, ul, li, #nav, #item{
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /*Set the fixed height of the footer here*/
+    height: 60px;
+    line-height: 60px;
+    /*Vertically center the text there*/
+}
+
+/*html, body, div,  h1, h2, h3, h4, h5, h6, p, ol, ul, li, #nav, #item{
     margin: 0;
     padding: 0;
     border: 0;
@@ -83,16 +85,188 @@ body{
 
 ol,ul {
     list-style: none;
+}*/
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    border-radius: 50%;
+    line-height: 2;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: inherit;
-    font-weight: 600;
-    line-height: 1.75em;
-    margin-bottom: 1em;
+div.wrapper-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-gap: 40px;*/
+}
+
+.chef-img {
+    border-radius: 50%;
+    height: 200px;
+    width: 220px;
+    margin-right: 30px;
+    float: left;
+}
+
+.img-sustainability {
+    height: 170px;
+    width: 200px;
+}
+
+.container-5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 150px;
 }
 
 
 
 
+h3 {
+    margin-top: 15px;
+    font-weight: 900;
+}
 
+img.img-1 {
+    border-radius: 50%;
+}
+
+
+
+h1.heading {
+    text-align: center;
+    margin-left: 2.5em;
+    margin-top: 70px;
+    font-size: 56px;
+}
+
+h3.heading-6 {
+    margin-top: 40px;
+    color: #A9A9A9;
+    line-height: 2;
+    font-size: 30px;
+}
+
+div.wrapper-1 {
+    background-color: #FFFAF0;
+    height: 500px;
+    width: 1260px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+div.wrapper-2 {
+    color: #A9A9A9;
+    font-weight: 900;
+    line-height: 2;
+    background-color: #F0F8FF;
+}
+
+div.wrapper-3 {
+    font-size: 30px;
+    background-color: #D3D3D3;
+    margin-top: 566px;
+    height: 150px;
+    width: 1260px;
+    color: #fff;
+}
+
+.wrapper-4 {
+    float: right;
+}
+
+
+
+
+.para-1 {
+    width: 50%;
+    font-size: 15px;
+    margin-left: 90px;
+    margin-top: 0px;
+}
+
+.para-2 {
+    font-size: 15px;
+    width: 50%;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+.para-3 {
+    font-size: 15px;
+    width: 50%;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+p.para-4 {
+    width: 50%;
+    /*word-wrap: break-word;*/
+    margin-left: 200px;
+    overflow: hidden;
+}
+
+.para-class {
+    margin-left: 150px;
+    /*color: #F0F8FF;*/
+}
+
+h3 {
+    margin-left: 100px;
+}
+
+nav:hover ul {
+    display: block;
+}
+
+li:hover {
+    background: blue;
+}
+
+.accept-policy {
+    list-style: none;
+    margin: 10px 30px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.media {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-53%, -50%);
+}
+
+li:hover {
+    color: #292929;
+    border: 1px solid #292929;
+    transition: .5s;
+}
+
+
+.btn-send {
+    background-color: #696969;
+    color: white;
+}
+
+    .btn-send:hover {
+        color: #B0C4DE;
+    }
+
+.btn-style {
+    background-color: #696969;
+    color: white;
+}
+
+.btn-send:hover {
+    color: #B0C4DE;
+}
