@@ -24,12 +24,15 @@ namespace NC_Sustainability
 
                 try
                 {
-                    var context = services.GetRequiredService<NCDbContext>();
-                    context.Database.Migrate();
-                    NCSeedData.Initialize(services);
                     var identityContext = services.GetRequiredService<ApplicationDbContext>();
                     identityContext.Database.Migrate();
                     ApplicationSeedData.SeedAsync(identityContext, services).Wait();
+                    //var context = services.GetRequiredService<NCDbContext>();
+                    //context.Database.Migrate();
+                    //NCSeedData.Initialize(services);
+                    //var identityContext = services.GetRequiredService<ApplicationDbContext>();
+                    //identityContext.Database.Migrate();
+                    //ApplicationSeedData.SeedAsync(identityContext, services).Wait();
                 }
                 catch (Exception ex)
                 {
