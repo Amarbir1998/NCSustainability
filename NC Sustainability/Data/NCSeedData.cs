@@ -40,7 +40,7 @@ namespace NC_Sustainability.Data
                             Title = "Sample",
                             Edate = DateTime.Parse("2020-01-30"),
                             EventDescription = "Growing plants nearby places in town",
-                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Planting").ID
+                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Academic").ID
 
                         },
                         new Event
@@ -48,21 +48,21 @@ namespace NC_Sustainability.Data
                             Title = "D",
                             Edate = DateTime.Parse("2020-02-05"),
                             EventDescription = "Donating winter clothes to needy people",
-                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Donation").ID
+                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Academic").ID
                         },
                         new Event
                         {
                             Title = "WM",
                             Edate = DateTime.Parse("2020-02-07"),
                             EventDescription = "Collecting waste which can be used for fertilisers",
-                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Waste Management").ID
+                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Food").ID
                         },
                         new Event
                         {
                             Title = "BY",
                             Edate = DateTime.Parse("2020-02-12"),
                             EventDescription = "Encouraging people for using their own mugs for coffee / Tea",
-                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "BYOrB").ID
+                            EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Waste Management").ID
                         });
                     context.SaveChanges();
                 }
