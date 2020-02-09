@@ -11,7 +11,6 @@ using NC_Sustainability.Models;
 
 namespace NC_Sustainability.Controllers
 {
-    [Authorize]
     public class EventsController : Controller
     {
         private readonly NCDbContext _context;
@@ -22,8 +21,12 @@ namespace NC_Sustainability.Controllers
         }
 
         // GET: Events
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
+            //var campers = from c in _context.Campers
+            //    .Include(c => c.Compound)
+            //              select c;
+
             var nCDbContext = _context.Events.Include(ec => ec.EventCategory);
             return View(await nCDbContext.ToListAsync());
         }
