@@ -6,6 +6,17 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>@ViewData["Title"] - NC_Sustainability</title>
 
+    <style>
+        body {
+            padding-top: 160px;
+        }
+
+        .aligntobottom {
+            bottom: 0;
+            position: absolute;
+        }
+    </style>
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -19,10 +30,11 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #708090; margin-bottom:30px">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Images/Sus-logo.png" width="350" /></a>
+        <nav id="navigation" class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #708090; margin-bottom:30px">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo" src="~/Images/Sus-logo.png" width="350" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,18 +44,27 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="EventCategories" asp-action="Index">Event Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="EmailNotifyViewModels" asp-action="Index">Send Notification</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop" data-toggle="dropdown">
+                                All Events & Types
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="EventCategories" asp-action="Index">Event Categories</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Events" asp-action="Index">All Events</a>
+                            </div>
                         </li>
                         @*<li class="nav-item">
-            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">EventsCategories</a>
-        </li>*@
+                            <a class="nav-link text-white" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
+                        </li>*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop" data-toggle="dropdown">
+                                Promotions
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-controller="Events" asp-action="Index">Active</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Events" asp-action="Index">Upcoming</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -56,32 +77,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            <ul>
-                <li>
-                    <a> <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="fa fa-google-plus" aria-hidden="true"></i>
-                    </a>
-                </li>
 
-            </ul>
-            &copy; 2020 - NC_Sustainability - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -104,5 +101,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>

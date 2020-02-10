@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div id="carouselFull" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -12,22 +12,22 @@
         <div class="carousel-item active">
             <img class="d-block w-100 img-fluid" src="~/Images/niagara sustainability.jpg" alt="Niagara Sustainability">
             <div class="carousel-caption d-md-block">
-                <h3>Welcome to NC Sustainbility</h3>
-                <p>Sustainbility</p>
+                <h3 class="hypertext-1">Welcome to NC Sustainability</h3>
+                <p class="caro-para1"></p>
             </div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100 img-fluid" src="~/Images/water.jpg" alt="Biodiversity">
-            <div class="carousel-caption d-md-block">
-                <h3>NC Group</h3>
-                <p>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</p>
+            <div id="carousel" class="carousel-caption d-md-block">
+                <h3 class="hypertext-1">Biodiversity</h3>
+                <p class="caro-para1">Biodiversity can be characterized as the assortment of life. Explicitly in the Niagara Region, the lavishness of life is very high</p>
             </div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100 img-fluid" src="~/Images/wellandcampus.jpeg" alt="Niagara College">
             <div class="carousel-caption d-md-block">
-                <h3>Niagara College</h3>
-                <p>dsfaaaaaaaffffffffffffffffffffffffffffffffffffffff</p>
+                <h3 class="hypertext-1">Niagara College</h3>
+                <p class="caro-para1">Perceived for its responsibility to supportability and naturalization, the Welland Campus is situated in an agreeable, private network in the core of the Niagara Region.</p>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
 <div class="wrapper">
     <div class="row">
         <img class="img-1" src="~/Images/waste.jpg" style="margin-top:20px" width="330" height="330" />
-        <h3>Garbage Bins</h3>
+        <h3 class="h3-class">Garbage Bins</h3>
         <p class="para-1">
             A waste container is a container for temporarily storing waste, and is usually made out of metal or plastic. Some common terms are dustbin,
             garbage can, and trash can. The words "rubbish", "basket" and "bin" are more common in British English usage .
@@ -60,7 +60,7 @@
     </div>
     <div class="row2">
         <img class="img-1" src="~/Images/biodiversity.jpg" style="margin-top:20px; margin-bottom: 20px;" width="330" height="330" />
-        <h3>Nature Trails</h3>
+        <h3 class="h3-class">Nature Trails</h3>
         <p class="para-3">
             The Niagara Escarpment, a United Nations Biosphere Reserve can be spotted at the parts of the bargains pushes in our Wine Visitor and
             Education Center, and up and down the grounds. The Escarpment is a novel zone, with numerous geologic, natural and ecologically explicit angles.
@@ -78,13 +78,13 @@
         </h3>
     </div>
 </div>
-<div class="wrapper-2" style="margin-top: 65px">
+<div class="wrapper-2" style="margin-top: 65px; padding:20px;">
     <div class="container-1">
         <img class="chef-img" src="~/Images/chef garden.jpg" />
         <p class="para-4" style="word-wrap:normal;">
             The Chef's Garden is situated at the Niagara-on-the-Lake Campus only outside of the Benchmark Restaurant. The nursery is home to numerous incredible vegetables,
             berries, and other palatable treats. The nursery can give the Canadian Food and Wine Institute and Benchmark Restaurant with an assortment of crisp nourishment things
-            all through the gather months
+            all through the gather months.
         </p>
     </div>
     <div class="container-2">
@@ -99,12 +99,12 @@
         <img class="chef-img" src="~/Images/food.jpg" />
         <p class="para-4">
             The concept of food system has gained prominence in recent years amongst both scholars and policy-makers. Experts from diverse disciplines and backgrounds
-            have in particular discussed the nature and origin of the â€œunsustainabilityâ€ of our modern food systems. These efforts tend, however, to be framed within distinctive
+            have in particular discussed the nature and origin of the “unsustainability” of our modern food systems. These efforts tend, however, to be framed within distinctive
             disciplinary narratives.
         </p>
     </div>
     <div class="container-4" style="margin-top: 40px;">
-        <img class="chef-img" src="~/Images/welland bus.jpg" />
+        <img class="chef-img" src="~/Images/welland-bus.jpg" />
         <p class="para-4">
             The Student Administrative Council (SAC) actualized the Universal Bus Pass in September 2007, giving direct connections between all Niagara Region Transits
             including, Welland, St. Catharines, and Niagara Falls to the grounds. Also, the U-Pass gives boundless ridership on all travel frameworks (Welland, Niagara
@@ -116,20 +116,47 @@
     <h3 class="para-class">Are you ready in the new activity of Sustainability?<button class="btn-style" style="margin:10px; width:100px;" type="button">Join</button></h3>
 </div>
 <div class="wrapper-5">
+
     <div class="container-5">
         <img class="img-sustainability" src="~/Images/pic-1.png" />
         <img class="img-sustainability" src="~/Images/pic-2.jpg" />
         <img class="img-sustainability" src="~/Images/pic-4.jpg" />
         <img class="img-sustainability" src="~/Images/pic-5.jpg" />
     </div>
+
+    <div class="wrapper-7">
+        <h5 class="hyper-5">Get In Touch</h5>
+        <input class="input-1" type="text" placeholder="Name" />
+        <input class="input-2" type="email" placeholder="Email" />
+        <textarea class="textarea-1" placeholder="Message" rows="4" cols="30"></textarea>
+        <button type="button" class="btn-send">Send Message</button>
+        <hr class="line" />
+    </div>
 </div>
 
+<footer class="footer text-muted">
+    <div class="copy">
+        &copy; Niagara College Canada
+    </div>
+
+    <div class="media">
+
+        <ul>
+            <li class="social-media">
+                <a href="https://www.facebook.com/NiagaraCollegeSustainability"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            </li>
+            <li class="social-media1">
+                <a href="https://www.instagram.com/sustainabilitync/"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li class="social-media2">
+                <a href="https://twitter.com/niagaracollege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+
+    </div>
+</footer>
 
 
-<div class="wrapper-4">
-    <h5 style="margin-top: 45px;">Get In Touch</h5>
-    <span><input type="text" placeholder="Name" style="width: 298px; height:60px; margin: 35px;" /><input type="text" placeholder="Email" style="width: 298px; height:60px;" /></span> <br />
-    <textarea placeholder="Message" rows="10" cols="86" style="margin-left:35px;"></textarea><br />
-    <button type="button" class="btn-send" style="margin-top:30px; margin-left:250px; height:40px; width:150px;   ">Send Message</button>
-</div>
+
+
 

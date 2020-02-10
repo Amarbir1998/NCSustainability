@@ -100,4 +100,3 @@ C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC_Sustainability.Resources.Constants.EmailInfo.resources
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.GenerateResource.cache
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
-C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
