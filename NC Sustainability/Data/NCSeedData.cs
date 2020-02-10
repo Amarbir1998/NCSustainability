@@ -32,6 +32,7 @@ namespace NC_Sustainability.Data
                         });
                     context.SaveChanges();
                 }
+                
                 if (!context.Events.Any())
                 {
                     context.Events.AddRange(
@@ -66,7 +67,21 @@ namespace NC_Sustainability.Data
                         });
                     context.SaveChanges();
                 }
-
+                if (!context.subscribers.Any())
+                {
+                    context.subscribers.AddRange(
+                        new Subscriber
+                        {
+                            Name = "Karanvir",
+                            Email = "singhkaranvir72@gmail.com"
+                        },
+                        new Subscriber
+                        {
+                            Name = "Amarbir",
+                            Email = "asingh457@ncstudents.niagaracollege.ca"
+                        });
+                    context.SaveChanges();
+                }
             }
         }
     }

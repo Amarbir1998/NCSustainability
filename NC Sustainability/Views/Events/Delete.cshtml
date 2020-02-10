@@ -33,13 +33,13 @@
             @Html.DisplayNameFor(model => model.EventCategory)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EventCategory.ID)
+            @Html.DisplayFor(model => model.EventCategory.EventCategoryName)
         </dd class>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="ID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">Cancel</a>
     </form>
 </div>

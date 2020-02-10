@@ -26,10 +26,10 @@ namespace NC_Sustainability
                 {
                     var context = services.GetRequiredService<NCDbContext>();
                     context.Database.Migrate();
-                    NCSeedData.Initialize(services);
                     var identityContext = services.GetRequiredService<ApplicationDbContext>();
                     identityContext.Database.Migrate();
                     ApplicationSeedData.SeedAsync(identityContext, services).Wait();
+                    NCSeedData.Initialize(services);
                 }
                 catch (Exception ex)
                 {

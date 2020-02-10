@@ -7,16 +7,17 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NC_Sustainability.Data;
 
-namespace NC_Sustainability.Migrations
+namespace NC_Sustainability.Data.NCMigrations
 {
     [DbContext(typeof(NCDbContext))]
-    [Migration("20200130225927_firstMig")]
-    partial class firstMig
+    [Migration("20200209233615_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasDefaultSchema("dbo")
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -53,6 +54,36 @@ namespace NC_Sustainability.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("EventCategories");
+                });
+
+            modelBuilder.Entity("NC_Sustainability.Models.Subscriber", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("subscribers");
+                });
+
+            modelBuilder.Entity("NC_Sustainability.ViewModels.AssignedOptionVM", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Assigned");
+
+                    b.Property<string>("DisplayText");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("AssignedOptionVM");
                 });
 
             modelBuilder.Entity("NC_Sustainability.Models.Event", b =>

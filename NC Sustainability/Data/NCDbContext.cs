@@ -35,6 +35,7 @@ namespace NC_Sustainability.Data
         public DbSet<Event> Events { get; set; }
 
         public DbSet<EventCategory> EventCategories { get; set; }
+        public DbSet<Subscriber> subscribers { get; set; }
 
         public DbSet<AssignedOptionVM> AssignedOptionVM { get; set; }
 
@@ -57,6 +58,5 @@ namespace NC_Sustainability.Data
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
-        public DbSet<EmailNotifyViewModel> EmailNotifyViewModel { get; set; }
     }
 }

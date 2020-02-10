@@ -4,9 +4,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create a New Event</h1>
 
-<h4>Event</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -32,6 +31,9 @@
                 <select asp-for="EventCategoryID" class ="form-control" asp-items="ViewBag.EventCategoryID"></select>
             </div>
             <div class="form-group">
+                <a class="btn btn-info" onclick="SendMailToUser()">Click to send Email Notification</a><br />
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -39,9 +41,19 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn-warning">Cancel</a>
 </div>
-
+<script>
+    var SendEmail = function () {
+        $.ajax({
+            type: "Post",
+            url: "/Test/SendMailToUser",
+            success: function (data) {
+                alert("Notifications Sent Successfully");
+            }
+        })
+    }
+</script>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

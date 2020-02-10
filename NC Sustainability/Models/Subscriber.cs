@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace NC_Sustainability.Models
 {
-    public class EmailNotifyViewModel
+    public class Subscriber
     {
         public int ID { get; set; }
-        [Required]
-        [Display(Name = "To (Email Address)")]
-        public string ToEmail { get; set; }
+        [Display(Name ="Name")]
+        public string Name { get; set; }
+        [Display(Name = "Email Address")]
+        public string Email { get; set; }
+
     }
 }

@@ -99,8 +99,5 @@ C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Index.g.cshtml.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC_Sustainability.Resources.Constants.EmailInfo.resources
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.GenerateResource.cache
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EmailNotifyViewModels\Create.g.cshtml.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EmailNotifyViewModels\Delete.g.cshtml.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EmailNotifyViewModels\Details.g.cshtml.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EmailNotifyViewModels\Edit.g.cshtml.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EmailNotifyViewModels\Index.g.cshtml.cs
+C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache

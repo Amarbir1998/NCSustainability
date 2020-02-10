@@ -1,0 +1,6 @@
+﻿Commands used till now:
+
+Add-migration -context NCDbContext
+Update-database -context NCDbContext
+
+Install-Package MailKit
