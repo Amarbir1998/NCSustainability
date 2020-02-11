@@ -2,14 +2,33 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NC_Sustainability.Migrations
+namespace NC_Sustainability.Data.NCMigrations
 {
-    public partial class firstMig : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "dbo");
+
+            migrationBuilder.CreateTable(
+                name: "AssignedOptionVM",
+                schema: "dbo",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    DisplayText = table.Column<string>(nullable: true),
+                    Assigned = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AssignedOptionVM", x => x.ID);
+                });
+
             migrationBuilder.CreateTable(
                 name: "EventCategories",
+                schema: "dbo",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -22,7 +41,23 @@ namespace NC_Sustainability.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "subscribers",
+                schema: "dbo",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_subscribers", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Events",
+                schema: "dbo",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -38,6 +73,7 @@ namespace NC_Sustainability.Migrations
                     table.ForeignKey(
                         name: "FK_Events_EventCategories_EventCategoryID",
                         column: x => x.EventCategoryID,
+                        principalSchema: "dbo",
                         principalTable: "EventCategories",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
@@ -45,6 +81,7 @@ namespace NC_Sustainability.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Events_EventCategoryID",
+                schema: "dbo",
                 table: "Events",
                 column: "EventCategoryID");
         }
@@ -52,10 +89,20 @@ namespace NC_Sustainability.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Events");
+                name: "AssignedOptionVM",
+                schema: "dbo");
 
             migrationBuilder.DropTable(
-                name: "EventCategories");
+                name: "Events",
+                schema: "dbo");
+
+            migrationBuilder.DropTable(
+                name: "subscribers",
+                schema: "dbo");
+
+            migrationBuilder.DropTable(
+                name: "EventCategories",
+                schema: "dbo");
         }
     }
 }
