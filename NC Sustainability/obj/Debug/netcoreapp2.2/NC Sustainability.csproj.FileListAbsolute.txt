@@ -97,7 +97,6 @@ C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Details.g.cshtml.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Edit.g.cshtml.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Index.g.cshtml.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC_Sustainability.Resources.Constants.EmailInfo.resources
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.GenerateResource.cache
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\Administrator\Desktop\NCSustainability-master\NC Sustainability\bin\Debug\netcoreapp2.2\NC Sustainability.deps.json
@@ -197,3 +196,16 @@ C:\Users\Administrator\Documents\NcSustainability\obj\Debug\netcoreapp2.2\NC Sus
 C:\Users\Administrator\Documents\NcSustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\IndexS.g.cshtml.cs
 C:\Users\Administrator\Documents\NcSustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Subscribe.g.cshtml.cs
 C:\Users\Administrator\Documents\NcSustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.Resources.Constants.EmailInfo.resources
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\IndexS.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Subscribe.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Edit.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Index.g.cshtml.cs
