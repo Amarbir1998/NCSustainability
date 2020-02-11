@@ -1,4 +1,4 @@
-﻿@model NC_Sustainability.Models.Event
+﻿@model NCSustainability.Models.Event
 
 @{
     ViewData["Title"] = "Details";
@@ -37,6 +37,8 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.ID">Edit</a> 
-    <a asp-action="Index" class="btn btn-primary">Cancel</a>
-</div>
+    @if (User.IsInRole("Admin"))
+    {
+        <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.ID">Edit</a>}
+        <a asp-action="Index" class="btn btn-primary">Cancel</a>
+    </div>

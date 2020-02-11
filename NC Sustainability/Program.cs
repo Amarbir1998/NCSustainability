@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NC_Sustainability.Data;
+using NCSustainability.Data;
 
-namespace NC_Sustainability
+namespace NCSustainability
 {
     public class Program
     {

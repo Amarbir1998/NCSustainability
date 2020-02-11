@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NC_Sustainability.Data
+namespace NCSustainability.Data
 {
     public static class ApplicationSeedData
     {
@@ -13,7 +13,7 @@ namespace NC_Sustainability.Data
         {
             //Create Roles
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            string[] roleNames = { "Admin" };
+            string[] roleNames = { "Admin", "Subscriber" };
             IdentityResult roleResult;
             foreach (var roleName in roleNames)
             {
@@ -38,6 +38,22 @@ namespace NC_Sustainability.Data
                 if (result.Succeeded)
                 {
                     userManager.AddToRoleAsync(user, "Admin").Wait();
+                }
+            }
+            //Create Users
+            if (userManager.FindByEmailAsync("subscriber1@outlook.com").Result == null)
+            {
+                IdentityUser user = new IdentityUser
+                {
+                    UserName = "subscriber1@outlook.com",
+                    Email = "subscriber1@outlook.com"
+                };
+
+                IdentityResult result = userManager.CreateAsync(user, "password").Result;
+
+                if (result.Succeeded)
+                {
+                    userManager.AddToRoleAsync(user, "Subscriber").Wait();
                 }
             }
             if (userManager.FindByEmailAsync("user1@outlook.com").Result == null)

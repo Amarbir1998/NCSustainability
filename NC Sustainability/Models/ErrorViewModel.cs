@@ -1,6 +1,6 @@
 using System;
 
-namespace NC_Sustainability.Models
+namespace NCSustainability.Models
 {
     public class ErrorViewModel
     {

@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using System.Web.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MimeKit;
-using MailKit;
-using MailKit.Net.Smtp;
-using NC_Sustainability.Data;
-using NC_Sustainability.Models;
-using System.Web.Mvc;
-using SmtpClient = MailKit.Net.Smtp.SmtpClient;
-using System.Web.Helpers;
+using NCSustainability.Data;
+using NCSustainability.Models;
 
-namespace NC_Sustainability.Controllers
+namespace NCSustainability.Controllers
 {
     public class EventsController : Controller
     {
@@ -59,7 +52,8 @@ namespace NC_Sustainability.Controllers
         public IActionResult Create()
         {
 
-            ViewData["EventCategoryID"] = new SelectList(_context.Set<EventCategory>(), "ID", "ID");
+
+            PopulateDropDownLists();
 
 
             return View();
@@ -76,14 +70,15 @@ namespace NC_Sustainability.Controllers
             {
                 _context.Add(e);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index)); 
             }
             ///////////////////////////////////////////////////////////////////////////////////////////////
             ////////////////////////////_______Added Code From____________/////////////////////////////////
             ///////           https://dotnetcoretutorials.com/2017/11/02/         /////////////////////////
             ///////////////////////////////////////////////////////////////////////////////////////////////
-            
-            ViewData["EventCategoryID"] = new SelectList(_context.Set<EventCategory>(), "ID", "ID", e.EventCategory.EventCategoryName);
+
+
+            PopulateDropDownLists(e);
             return View(e);
         }
 
@@ -100,7 +95,8 @@ namespace NC_Sustainability.Controllers
             {
                 return NotFound();
             }
-            ViewData["EventCategoryID"] = new SelectList(_context.Set<EventCategory>(), "ID", "ID", @event.EventCategoryID);
+
+            PopulateDropDownLists(@event);
             return View(@event);
         }
 
@@ -136,7 +132,8 @@ namespace NC_Sustainability.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EventCategoryID"] = new SelectList(_context.Set<EventCategory>(), "ID", "ID", @event.EventCategoryID);
+            
+            PopulateDropDownLists(@event);
             return View(@event);
         }
 
@@ -168,6 +165,16 @@ namespace NC_Sustainability.Controllers
             _context.Events.Remove(@event);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        private SelectList CategorySelectList(int? selectedId)
+        {
+            return new SelectList(_context.EventCategories
+                .OrderBy(d => d.EventCategoryName), "ID", "EventCategoryName", selectedId);
+        }
+        [HttpGet]
+        private void PopulateDropDownLists(Event @event = null)
+        {
+            ViewData["EventCategoryID"] = CategorySelectList(@event?.EventCategoryID);
         }
 
         private bool EventExists(int id)
@@ -205,6 +212,41 @@ namespace NC_Sustainability.Controllers
 
         //}
 
+        public void Send()
+        {
+
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("Amarbir", "ncsustainability@outlook.com"));
+            message.To.Add(new MailboxAddress("Karanvir", "singhkaranvir72@gmail.com"));
+            ///////////////////////////////////////////////////////////////////////////////////////////////
+            message.Subject = "Email send test";
+            //We will say we are sending HTML. But there are options for plaintext etc. 
+            message.Body = new TextPart("plain")
+            {
+                Text = @"Testing... Testing email sending..."
+            };
+
+            //Be careful that the SmtpClient class is the one from Mailkit not the framework!
+            using (var emailClient = new MailKit.Net.Smtp.SmtpClient())
+            {
+                emailClient.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+                emailClient.Connect("smtp-mail.gmail.com", 587, false);
+
+                //Configure an SmtpClient to send the mail.
+
+                //emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                //emailClient.EnableSsl = false;
+                //emailClient.Host = "relay-hosting.secureserver.net";
+                //emailClient.Port = 25;
+
+                emailClient.Authenticate("ncsustainability@outlook.com", "Sustainability1234@");
+
+                emailClient.Send(message);
+
+                emailClient.Disconnect(true);
+            }
+        }
 
         public ActionResult SendMailToUser()
         {

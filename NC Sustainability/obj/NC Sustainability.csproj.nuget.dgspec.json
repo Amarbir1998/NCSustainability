@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj": {}
+    "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj": {
+    "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj",
         "projectName": "NC Sustainability",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\NC Sustainability.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\NCSustainability\\NC Sustainability\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Source\\Repos\\NCSustainability\\NC Sustainability\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -43,11 +43,7 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "MailKit": {
-              "target": "Package",
-              "version": "[2.5.0, )"
-            },
-            "Microsoft.AspNet.WebHelpers": {
+            "Microsoft.AspNet.WebPages": {
               "target": "Package",
               "version": "[3.2.7, )"
             },
@@ -72,9 +68,13 @@
               "target": "Package",
               "version": "[2.2.4, )"
             },
-            "Newtonsoft.Json": {
+            "WebHelpers": {
               "target": "Package",
-              "version": "[12.0.3, )"
+              "version": "[4.0.2, )"
+            },
+            "mailkit": {
+              "target": "Package",
+              "version": "[2.5.0, )"
             }
           },
           "imports": [

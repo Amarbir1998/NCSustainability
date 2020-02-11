@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using NC_Sustainability.Data;
-using NC_Sustainability.Models;
+using NCSustainability.Data;
+using NCSustainability.Models;
 
-namespace NC_Sustainability.Controllers
+namespace NCSustainability.Controllers
 {
-    [Authorize(Roles ="Admin")]
+//    [Authorize]
     public class EventCategoriesController : Controller
     {
         private readonly NCDbContext _context;
@@ -25,6 +25,14 @@ namespace NC_Sustainability.Controllers
         // GET: EventCategories
         public async Task<IActionResult> Index()
         {
+            //if (User.IsInRole("Admin"))
+            //{
+            //    return View("Index");
+            //}
+            //else if(User.IsInRole("Subscriber"))
+            //{
+            //    return View("IndexS");
+            //}
             return View(await _context.EventCategories.ToListAsync());
         }
 
@@ -44,6 +52,28 @@ namespace NC_Sustainability.Controllers
             }
 
             return View(eventCategory);
+        }
+
+        // GET: EventCategories/Subscribe
+        public IActionResult Subscribe()
+        {
+            return View();
+        }
+
+        // POST: EventCategories/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Subscribe([Bind("ID,Name,Email")] Subscriber subscriber)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(subscriber);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(subscriber);
         }
 
         // GET: EventCategories/Create

@@ -5,10 +5,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using NC_Sustainability.Models;
-using NC_Sustainability.ViewModels;
+using NCSustainability.Models;
+using NCSustainability.ViewModels;
 
-namespace NC_Sustainability.Data
+namespace NCSustainability.Data
 {
     public class NCDbContext : DbContext
     {

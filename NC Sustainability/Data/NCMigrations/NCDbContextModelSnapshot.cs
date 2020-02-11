@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NC_Sustainability.Data;
+using NCSustainability.Data;
 
-namespace NC_Sustainability.Data.NCMigrations
+namespace NCSustainability.Data.NCMigrations
 {
     [DbContext(typeof(NCDbContext))]
     partial class NCDbContextModelSnapshot : ModelSnapshot
@@ -20,7 +20,7 @@ namespace NC_Sustainability.Data.NCMigrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("NC_Sustainability.Models.Event", b =>
+            modelBuilder.Entity("NCSustainability.Models.Event", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -43,7 +43,7 @@ namespace NC_Sustainability.Data.NCMigrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("NC_Sustainability.Models.EventCategory", b =>
+            modelBuilder.Entity("NCSustainability.Models.EventCategory", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -56,22 +56,24 @@ namespace NC_Sustainability.Data.NCMigrations
                     b.ToTable("EventCategories");
                 });
 
-            modelBuilder.Entity("NC_Sustainability.Models.Subscriber", b =>
+            modelBuilder.Entity("NCSustainability.Models.Subscriber", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
                     b.ToTable("subscribers");
                 });
 
-            modelBuilder.Entity("NC_Sustainability.ViewModels.AssignedOptionVM", b =>
+            modelBuilder.Entity("NCSustainability.ViewModels.AssignedOptionVM", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -86,9 +88,9 @@ namespace NC_Sustainability.Data.NCMigrations
                     b.ToTable("AssignedOptionVM");
                 });
 
-            modelBuilder.Entity("NC_Sustainability.Models.Event", b =>
+            modelBuilder.Entity("NCSustainability.Models.Event", b =>
                 {
-                    b.HasOne("NC_Sustainability.Models.EventCategory", "EventCategory")
+                    b.HasOne("NCSustainability.Models.EventCategory", "EventCategory")
                         .WithMany("Events")
                         .HasForeignKey("EventCategoryID")
                         .OnDelete(DeleteBehavior.Cascade);
