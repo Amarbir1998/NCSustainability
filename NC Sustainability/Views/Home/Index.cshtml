@@ -1,6 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+@model IEnumerable<NCSustainability.Models.Event>
+@{
+    ViewData["Title"] = "Index";
+}
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div id="carouselFull" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -133,6 +139,45 @@
         <hr class="line" />
     </div>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventCategory)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 <footer class="footer text-muted">
     <div class="copy">

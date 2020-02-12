@@ -4,15 +4,26 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NCSustainability.Data;
 using NCSustainability.Models;
 
 namespace NCSustainability.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly NCDbContext _context;
+
+        public HomeController(NCDbContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+
+            var nCDbContext = _context.Events.Include(ec => ec.EventCategory);
+            return View(await nCDbContext.ToListAsync());
         }
 
         public IActionResult Privacy()
