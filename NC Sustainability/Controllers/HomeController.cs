@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using NC_Sustainability.Models;
+using NCSustainability.Models;
 
-namespace NC_Sustainability.Controllers
+namespace NCSustainability.Controllers
 {
     public class HomeController : Controller
     {

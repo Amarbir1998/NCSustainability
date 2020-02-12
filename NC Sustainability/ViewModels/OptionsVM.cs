@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NC_Sustainability.ViewModels
+namespace NCSustainability.ViewModels
 {
     public class OptionsVM
     {

@@ -43,11 +43,7 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "MailKit": {
-              "target": "Package",
-              "version": "[2.5.0, )"
-            },
-            "Microsoft.AspNet.WebHelpers": {
+            "Microsoft.AspNet.WebPages": {
               "target": "Package",
               "version": "[3.2.7, )"
             },
@@ -72,9 +68,13 @@
               "target": "Package",
               "version": "[2.2.4, )"
             },
-            "Newtonsoft.Json": {
+            "WebHelpers": {
               "target": "Package",
-              "version": "[12.0.3, )"
+              "version": "[4.0.2, )"
+            },
+            "mailkit": {
+              "target": "Package",
+              "version": "[2.5.0, )"
             }
           },
           "imports": [

@@ -1,14 +1,16 @@
-﻿@model IEnumerable<NC_Sustainability.Models.Event>
+﻿@model IEnumerable<NCSustainability.Models.Event>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
-</p>
+<h1>Events</h1>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create New</a>
+    </p>
+}
 <table class="table">
     <thead>
         <tr>
@@ -28,26 +30,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Edate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EventDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
-            </td>
-            <td>
-                <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.ID">Edit</a> 
-                <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Details</a> 
-                <a asp-action="Delete" class="btn btn-primary" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
+                </td>
+                <td>
+                    @if (User.IsInRole("Admin"))
+                    {
+
+                        <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.ID">Edit</a>
+                    }
+
+                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Details</a>
+                    
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Delete" class="btn btn-primary" asp-route-id="@item.ID">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

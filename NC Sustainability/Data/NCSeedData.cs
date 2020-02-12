@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using NC_Sustainability.Models;
+using NCSustainability.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NC_Sustainability.Data
+namespace NCSustainability.Data
 {
     public class NCSeedData
     {
@@ -32,7 +32,6 @@ namespace NC_Sustainability.Data
                         });
                     context.SaveChanges();
                 }
-                
                 if (!context.Events.Any())
                 {
                     context.Events.AddRange(
@@ -74,6 +73,16 @@ namespace NC_Sustainability.Data
                         {
                             Name = "Karanvir",
                             Email = "singhkaranvir72@gmail.com"
+                        },
+                        new Subscriber
+                        {
+                            Name = "Faiyaz",
+                            Email = "mkagzi21@gmail.com"
+                        },
+                        new Subscriber
+                        {
+                            Name = "Mit",
+                            Email = "shahmit2015@gmail.com"
                         },
                         new Subscriber
                         {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NC_Sustainability.Data.NCMigrations
+namespace NCSustainability.Data.NCMigrations
 {
     public partial class email : Migration
     {

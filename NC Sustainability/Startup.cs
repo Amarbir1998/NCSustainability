@@ -9,11 +9,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using NC_Sustainability.Data;
+using NCSustainability.Data;
 using Microsoft.AspNetCore.Identity;
-using NC_Sustainability.Models;
+using NCSustainability.Models;
+using Microsoft.AspNetCore.Identity.UI;
 
-namespace NC_Sustainability
+namespace NCSustainability
 {
     public class Startup
     {
@@ -43,8 +44,9 @@ namespace NC_Sustainability
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDefaultIdentity<IdentityUser>()
-                .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                 .AddRoles<IdentityRole>()
+                 .AddDefaultUI(UIFramework.Bootstrap4)
+                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -98,6 +100,7 @@ namespace NC_Sustainability
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

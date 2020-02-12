@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NC_Sustainability.Models
+namespace NCSustainability.Models
 {
     public interface IEmailService
     {

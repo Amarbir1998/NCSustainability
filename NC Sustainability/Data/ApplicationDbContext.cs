@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NC_Sustainability.Data
+namespace NCSustainability.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

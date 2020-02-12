@@ -39,19 +39,6 @@
           "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.AspNet.WebHelpers/3.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.WebPages": "[3.2.7, 3.3.0)",
-          "Microsoft.AspNet.WebPages.WebData": "[3.2.7, 3.3.0)"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Web.Helpers.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Web.Helpers.dll": {}
-        }
-      },
       "Microsoft.AspNet.WebPages/3.2.7": {
         "type": "package",
         "dependencies": {
@@ -69,27 +56,6 @@
           "lib/net45/System.Web.WebPages.Deployment.dll": {},
           "lib/net45/System.Web.WebPages.Razor.dll": {},
           "lib/net45/System.Web.WebPages.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebPages.Data/3.2.7": {
-        "type": "package",
-        "compile": {
-          "lib/net45/WebMatrix.Data.dll": {}
-        },
-        "runtime": {
-          "lib/net45/WebMatrix.Data.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebPages.WebData/3.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.WebPages.Data": "3.2.7"
-        },
-        "compile": {
-          "lib/net45/WebMatrix.WebData.dll": {}
-        },
-        "runtime": {
-          "lib/net45/WebMatrix.WebData.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.2.0": {
@@ -2972,7 +2938,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -4965,6 +4931,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "WebHelpers/4.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/WebHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net45/WebHelpers.dll": {}
+        }
       }
     }
   },
@@ -5029,18 +5004,6 @@
         "microsoft.aspnet.webapi.client.nuspec"
       ]
     },
-    "Microsoft.AspNet.WebHelpers/3.2.7": {
-      "sha512": "nHJFEnvCcTI/9aYZ0PJAd7l1J+XA9UMb8FCOYP/WN6sV3G20LD1ZdL/CS0AczBzPyr5H/h2ys9w1QtfGIgfcTA==",
-      "type": "package",
-      "path": "microsoft.aspnet.webhelpers/3.2.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.Web.Helpers.dll",
-        "microsoft.aspnet.webhelpers.3.2.7.nupkg.sha512",
-        "microsoft.aspnet.webhelpers.nuspec"
-      ]
-    },
     "Microsoft.AspNet.WebPages/3.2.7": {
       "sha512": "2jwZFB7PvY+tbdz0ZP4iEo7gMrJxkCQUzoGLh6swUc6ZXl6DoKyDslmGcC/j9PFmJXCRMVIqtRorlPSMU2DuRA==",
       "type": "package",
@@ -5060,32 +5023,6 @@
         "lib/net45/System.Web.WebPages.xml",
         "microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
         "microsoft.aspnet.webpages.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.WebPages.Data/3.2.7": {
-      "sha512": "wRnglowAe94/SMZpwEYKfXLe6U0yYu4bxMOBPIZyBAH0WE8m8I3wU43p7ZTOCTfOLWHalJ3cvN73Y23BBZqPbg==",
-      "type": "package",
-      "path": "microsoft.aspnet.webpages.data/3.2.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/WebMatrix.Data.dll",
-        "lib/net45/WebMatrix.Data.xml",
-        "microsoft.aspnet.webpages.data.3.2.7.nupkg.sha512",
-        "microsoft.aspnet.webpages.data.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.WebPages.WebData/3.2.7": {
-      "sha512": "AxvuTZdF1Z216x0ErUw/84QNsf42PuSFr0V3tUAzm8v0tVdg2SYTgRRxF9TgTRfkG3RA1Om5dmlyS3x3/MYotQ==",
-      "type": "package",
-      "path": "microsoft.aspnet.webpages.webdata/3.2.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/WebMatrix.WebData.dll",
-        "lib/net45/WebMatrix.WebData.xml",
-        "microsoft.aspnet.webpages.webdata.3.2.7.nupkg.sha512",
-        "microsoft.aspnet.webpages.webdata.nuspec"
       ]
     },
     "Microsoft.AspNetCore/2.2.0": {
@@ -8466,10 +8403,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+    "Newtonsoft.Json/11.0.2": {
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.3",
+      "path": "newtonsoft.json/11.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8492,9 +8429,8 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
+        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -13561,17 +13497,30 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "WebHelpers/4.0.2": {
+      "sha512": "MldykYEg7MbU8b933+j8zGeUo7/DbP5dG7qVAAmRefdQdZQeVPLsWTyHNvbRg1yojDCj9M8RGqNW7sCD0gqx8w==",
+      "type": "package",
+      "path": "webhelpers/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/WebHelpers.dll",
+        "lib/net45/WebHelpers.dll",
+        "webhelpers.4.0.2.nupkg.sha512",
+        "webhelpers.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "MailKit >= 2.5.0",
-      "Microsoft.AspNet.WebHelpers >= 3.2.7",
+      "Microsoft.AspNet.WebPages >= 3.2.7",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
-      "Newtonsoft.Json >= 12.0.3"
+      "WebHelpers >= 4.0.2",
+      "mailkit >= 2.5.0"
     ]
   },
   "packageFolders": {
@@ -13618,11 +13567,7 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "MailKit": {
-            "target": "Package",
-            "version": "[2.5.0, )"
-          },
-          "Microsoft.AspNet.WebHelpers": {
+          "Microsoft.AspNet.WebPages": {
             "target": "Package",
             "version": "[3.2.7, )"
           },
@@ -13647,9 +13592,13 @@
             "target": "Package",
             "version": "[2.2.4, )"
           },
-          "Newtonsoft.Json": {
+          "WebHelpers": {
             "target": "Package",
-            "version": "[12.0.3, )"
+            "version": "[4.0.2, )"
+          },
+          "mailkit": {
+            "target": "Package",
+            "version": "[2.5.0, )"
           }
         },
         "imports": [
@@ -13675,16 +13624,6 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebHelpers 3.2.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.WebHelpers",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebPages",
       "targetGraphs": [
@@ -13695,28 +13634,18 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebPages.Data 3.2.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.WebPages.Data",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebPages.WebData 3.2.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.WebPages.WebData",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WebHelpers 4.0.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "WebHelpers",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
       ]

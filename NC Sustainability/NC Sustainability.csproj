@@ -1,36 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-NcSustainability-6846238C-610E-4F2D-AD42-0973C31876CB</UserSecretsId>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>NC_Sustainability</RootNamespace>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="MailKit" Version="2.5.0" />
-    <PackageReference Include="Microsoft.AspNet.WebHelpers" Version="3.2.7" />
+    <PackageReference Include="mailkit" Version="2.5.0" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Compile Update="Resources\Constants\EmailInfo.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>EmailInfo.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\Constants\EmailInfo.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>EmailInfo.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <PackageReference Include="WebHelpers" Version="4.0.2" />
   </ItemGroup>
 
 </Project>

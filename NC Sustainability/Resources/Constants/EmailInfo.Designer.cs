@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NC_Sustainability.Resources.Constants {
+namespace NCSustainability.Resources.Constants {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace NC_Sustainability.Resources.Constants {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NC_Sustainability.Resources.Constants.EmailInfo", typeof(EmailInfo).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NCSustainability.Resources.Constants.EmailInfo", typeof(EmailInfo).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace NC_Sustainability.Resources.Constants {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Project Added to NC Sustainability.
+        ///   Looks up a localized string similar to New Project Added to NCSustainability.
         /// </summary>
         public static string EMAIL_SUBJECT_DEFAUALT {
             get {
