@@ -14,6 +14,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
@@ -32,34 +33,44 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Edate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EventDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
-                </td>
-                <td>
-                    @if (User.IsInRole("Admin"))
+        <tr>
+            <td>
+                @{
+                    if (item.imageContent != null && item.imageMimeType.Contains("image"))
                     {
-
-                        <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.ID">Edit</a>
+                        string imageBase64 = Convert.ToBase64String(item.imageContent);
+                        string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                        <img src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" style="max-height: 100px; max-width: 120px" class="img-fluid rounded" />
                     }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
+            </td>
+            <td>
+                @if (User.IsInRole("Admin"))
+                {
 
-                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Details</a>
-                    
-                    @if (User.IsInRole("Admin"))
-                    {
-                        <a asp-action="Delete" class="btn btn-primary" asp-route-id="@item.ID">Delete</a>
-                    }
-                </td>
-            </tr>
+                    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.ID">Edit</a>
+                }
+
+                <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Details</a>
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Delete" class="btn btn-primary" asp-route-id="@item.ID">Delete</a>
+                }
+            </td>
+        </tr>
         }
     </tbody>
 </table>

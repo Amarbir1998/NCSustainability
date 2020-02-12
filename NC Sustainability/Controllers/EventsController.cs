@@ -1,8 +1,10 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Web.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -64,11 +66,29 @@ namespace NCSustainability.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,Edate,EventDescription,EventCategoryID")] Event e)
+        public async Task<IActionResult> Create([Bind("ID,Title,Edate,EventDescription,EventCategoryID")] Event e, IFormFile thePicture)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(e);
+                    if (thePicture != null)
+                    {
+                        string mimeType = thePicture.ContentType;
+                        long fileLength = thePicture.Length;
+                        if (!(mimeType == "" || fileLength == 0))//Looks like we have a file!!!
+                        {
+                            if (mimeType.Contains("image"))
+                            {
+                                using (var memoryStream = new MemoryStream())
+                                {
+                                    await thePicture.CopyToAsync(memoryStream);
+                                    e.imageContent = memoryStream.ToArray();
+                                }
+                                e.imageMimeType = mimeType;
+                                e.imageFileName = thePicture.FileName;
+                            }
+                        }
+                    }
+                    _context.Add(e);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index)); 
             }

@@ -28,6 +28,19 @@ namespace NCSustainability.Models
         [Required(ErrorMessage = "Event Description is required.")]
         public string EventDescription { get; set; }
 
+        [ScaffoldColumn(false)]
+        public byte[] imageContent { get; set; }
+
+        [StringLength(256)]
+        [ScaffoldColumn(false)]
+        public string imageMimeType { get; set; }
+
+        [StringLength(100, ErrorMessage = "The name of the file cannot be more than 100 characters.")]
+        [Display(Name = "File Name")]
+        [ScaffoldColumn(false)]
+        public string imageFileName { get; set; }
+
+
         [Display(Name = "Event Category")]
         [Required(ErrorMessage = "Event Category is required.")]
         public int EventCategoryID { get; set; }
