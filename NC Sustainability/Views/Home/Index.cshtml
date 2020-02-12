@@ -46,6 +46,59 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventCategory)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                        {
+                            string imageBase64 = Convert.ToBase64String(item.imageContent);
+                            string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                            <img src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" style="max-height: 100px; max-width: 120px" class="img-fluid rounded" />
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 <hr class="new1" />
 <div class="wrapper">
     <div class="row">
@@ -140,44 +193,7 @@
     </div>
 </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Edate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EventDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EventCategory)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Edate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EventDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+
 
 <footer class="footer text-muted">
     <div class="copy">
