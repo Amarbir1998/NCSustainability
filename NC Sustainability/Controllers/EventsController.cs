@@ -125,7 +125,7 @@ namespace NCSustainability.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Edate,EventDescription,EventCategoryID")] Event @event)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Edate,EventDescription,EventCategoryID")] Event @event, string chkRemoveImage, IFormFile thePicture)
         {
             if (id != @event.ID)
             {
@@ -136,6 +136,34 @@ namespace NCSustainability.Controllers
             {
                 try
                 {
+                    //For the image
+                    if (chkRemoveImage != null)
+                    {
+                        @event.imageContent = null;
+                        @event.imageMimeType = null;
+                        @event.imageFileName = null;
+                    }
+                    else
+                    {
+                        if (thePicture != null)
+                        {
+                            string mimeType = thePicture.ContentType;
+                            long fileLength = thePicture.Length;
+                            if (!(mimeType == "" || fileLength == 0))//Looks like we have a file!!!
+                            {
+                                if (mimeType.Contains("image"))
+                                {
+                                    using (var memoryStream = new MemoryStream())
+                                    {
+                                        await thePicture.CopyToAsync(memoryStream);
+                                        @event.imageContent = memoryStream.ToArray();
+                                    }
+                                    @event.imageMimeType = mimeType;
+                                    @event.imageFileName = thePicture.FileName;
+                                }
+                            }
+                        }
+                    }
                     _context.Update(@event);
                     await _context.SaveChangesAsync();
                 }
