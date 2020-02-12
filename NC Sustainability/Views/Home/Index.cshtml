@@ -47,32 +47,18 @@
     </a>
 </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Image
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Edate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EventDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EventCategory)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+
+
+<h1 style="margin-top:50px">Events</h1>
+<div class="jumbotron">
+    <div class="row">
+
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
+
+            <div class="col-md-6" style="padding:50px">
+                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                <p>
                     @{
                         if (item.imageContent != null && item.imageMimeType.Contains("image"))
                         {
@@ -81,23 +67,16 @@
                             <img src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" style="max-height: 100px; max-width: 120px" class="img-fluid rounded" />
                         }
                     }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Edate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EventDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
-                </td>
-            </tr>
+                </p>
+                <p>@Html.DisplayFor(modelItem => item.Edate)</p>
+                <p>@Html.DisplayFor(modelItem => item.EventDescription)</p>
+                <p>@Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)</p>
+            </div>
+
         }
-    </tbody>
-</table>
+    </div>
+
+</div>
 
 <hr class="new1" />
 <div class="wrapper">
