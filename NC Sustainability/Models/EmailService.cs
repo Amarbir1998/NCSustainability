@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace NCSustainability.Models
 {
     public class EmailService : IEmailService
-    {
+      {
         private readonly IEmailConfiguration _emailConfiguration;
 
         public EmailService(IEmailConfiguration emailConfiguration)
