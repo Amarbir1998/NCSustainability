@@ -57,20 +57,22 @@
         {
 
             <div class="col-md-6" style="padding:50px">
-                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
-                <p>
-                    @{
-                        if (item.imageContent != null && item.imageMimeType.Contains("image"))
-                        {
-                            string imageBase64 = Convert.ToBase64String(item.imageContent);
-                            string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
-                            <img src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" style="max-height: 100px; max-width: 120px" class="img-fluid rounded" />
+                <div>
+                    <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                    <p>
+                        @{
+                            if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                            {
+                                string imageBase64 = Convert.ToBase64String(item.imageContent);
+                                string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                                <img src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" style="max-height: 100px; max-width: 200px" class="img-fluid rounded" />
+                            }
                         }
-                    }
-                </p>
-                <p>@Html.DisplayFor(modelItem => item.Edate)</p>
-                <p>@Html.DisplayFor(modelItem => item.EventDescription)</p>
-                <p>@Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)</p>
+                    </p>
+                    <p>@Html.DisplayFor(modelItem => item.Edate)</p>
+                    <p>@Html.DisplayFor(modelItem => item.EventDescription)</p>
+                    <p>@Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)</p>
+                </div>
             </div>
 
         }
@@ -78,7 +80,7 @@
 
 </div>
 
-<hr class="new1" />
+@*<hr class="new1" />
 <div class="wrapper">
     <div class="row">
         <img class="img-1" src="~/Images/waste.jpg" style="margin-top:20px" width="330" height="330" />
@@ -170,7 +172,7 @@
         <button type="button" class="btn-send">Send Message</button>
         <hr class="line" />
     </div>
-</div>
+</div>*@
 
 
 
