@@ -99,11 +99,11 @@
                     <div class="card-body">
                         <h4 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h4>
                         <p class="card-text">@Html.DisplayFor(modelItem => item.Edate)</p>
-                        <p class="card-text">@Html.DisplayFor(modelItem => item.EventDescription)</p>
+                        @*<p class="card-text">@Html.DisplayFor(modelItem => item.EventDescription)</p>*@
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Find Out More!</a>
-                        <a asp-action="~/Views/Events/Details" class="btn btn-primary" asp-route-id="@item.ID">Details</a>
+                        @*<a href="#" class="btn btn-primary">Find Out More!</a>*@
+                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Find Out More!</a>
                     </div>
                 </div>
             </div>

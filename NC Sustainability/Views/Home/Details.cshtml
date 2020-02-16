@@ -1,0 +1,45 @@
+﻿@model NCSustainability.Models.Event
+
+    <div>
+        <h4>Event</h4>
+        <div>
+            @{
+                if (Model.imageContent != null && Model.imageMimeType.Contains("image"))
+                {
+                    string imageBase64 = Convert.ToBase64String(Model.imageContent);
+                    string imageSrc = string.Format("data:" + Model.imageMimeType + ";base64,{0}", imageBase64);
+                    <img src="@imageSrc" alt="Profile Picture of @Model.Title" title="Profile Picture of @Model.Title" style="max-height: 500px" class="img-fluid rounded" />
+                }
+            }
+        </div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Edate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Edate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EventDescription)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EventDescription)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EventCategory)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EventCategory.EventCategoryName)
+            </dd>
+        </dl>
+    </div>
+<div>
+    <a asp-action="Index">BACK</a>
+</div>

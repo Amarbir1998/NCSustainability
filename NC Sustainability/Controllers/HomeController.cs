@@ -30,7 +30,24 @@ namespace NCSustainability.Controllers
         {
             return View();
         }
+        // GET: Events/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var @event = await _context.Events
+                .Include(ec => ec.EventCategory)
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (@event == null)
+            {
+                return NotFound();
+            }
+
+            return View(@event);
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
