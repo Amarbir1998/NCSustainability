@@ -96,7 +96,7 @@
                         {
                             string imageBase64 = Convert.ToBase64String(item.imageContent);
                             string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
-                            <img class="card-img-top" src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" />
+                            <img class="card-img-top" src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" height="200" width="300"/>
                         }
                     }
                     <div class="card-body">
