@@ -13,8 +13,11 @@ namespace NCSustainability.Models
         [Required(ErrorMessage = "Please enter your name.")]
         public string Name { get; set; }
         [Display(Name = "Email Address")]
+        [RegularExpression(@"^([\w]*[\w\.]*(?!\.)@niagaracollege.ca)", ErrorMessage ="email address should end with 'niagaracollege.ca'")]
         [Required(ErrorMessage = "Please enter email address.")]
         public string Email { get; set; }
 
+        [Display(Name = "Event Categories")]
+        public ICollection<EventSubscriber> EventSubscribers { get; set; }
     }
 }

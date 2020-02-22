@@ -91,6 +91,26 @@ namespace NCSustainability.Data
                         });
                     context.SaveChanges();
                 }
+                if (!context.EventSubscribers.Any())
+                {
+                    context.EventSubscribers.AddRange(
+                        new EventSubscriber
+                        {
+                            EventCategoryID = context.EventCategories.FirstOrDefault(c => c.EventCategoryName == "Academic").ID,
+                            SubscriberID = context.subscribers.FirstOrDefault(p => p.Name == "Mit").ID
+                        },
+                        new EventSubscriber
+                        {
+                            EventCategoryID = context.EventCategories.FirstOrDefault(c => c.EventCategoryName == "Food").ID,
+                            SubscriberID = context.subscribers.FirstOrDefault(p => p.Name == "Mit").ID
+                        },
+                        new EventSubscriber
+                        {
+                            EventCategoryID = context.EventCategories.FirstOrDefault(c => c.EventCategoryName == "Academic").ID,
+                            SubscriberID = context.subscribers.FirstOrDefault(p => p.Name == "Amarbir").ID
+                        });
+                    context.SaveChanges();
+                }
             }
         }
     }

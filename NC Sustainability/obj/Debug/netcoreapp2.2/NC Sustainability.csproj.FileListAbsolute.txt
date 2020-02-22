@@ -205,7 +205,6 @@ C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\IndexS.g.cshtml.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Subscribe.g.cshtml.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Edit.g.cshtml.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Index.g.cshtml.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Details.g.cshtml.cs
@@ -264,3 +263,10 @@ C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\
 C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.dll
 C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.pdb
 C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.CopyComplete
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Subscribe.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Create.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Delete.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Details.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Edit.g.cshtml.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Index.g.cshtml.cs

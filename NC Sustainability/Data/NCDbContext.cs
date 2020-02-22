@@ -35,6 +35,7 @@ namespace NCSustainability.Data
         public DbSet<Event> Events { get; set; }
 
         public DbSet<EventCategory> EventCategories { get; set; }
+        public DbSet<EventSubscriber> EventSubscribers { get; set; }
         public DbSet<Subscriber> subscribers { get; set; }
 
         public DbSet<AssignedOptionVM> AssignedOptionVM { get; set; }
@@ -44,7 +45,10 @@ namespace NCSustainability.Data
         {
             modelBuilder.HasDefaultSchema("dbo");
 
-            
+
+            //Many to Many Intersection Primary Key
+            modelBuilder.Entity<EventSubscriber>()
+            .HasKey(t => new { t.EventCategoryID, t.SubscriberID });
 
         }
 

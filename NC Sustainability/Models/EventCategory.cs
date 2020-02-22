@@ -19,5 +19,8 @@ namespace NCSustainability.Models
         public string EventCategoryName { get; set; }
 
         public virtual ICollection<Event> Events { get; set; }
+
+        [Display(Name = "Event Categories")]
+        public ICollection<EventSubscriber> eventSubscribers { get; set; }
     }
 }
