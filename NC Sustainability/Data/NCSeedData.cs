@@ -52,9 +52,22 @@ namespace NCSustainability.Data
                         },
                         new Event
                         {
-                            Title = "WM",
-                            Edate = DateTime.Parse("2020-02-07"),
-                            EventDescription = "Collecting waste which can be used for fertilisers",
+                            imageFileName = "ProtectTheNature.png",
+                           
+                            Title = "Protect The Nature",
+                            Edate = DateTime.Parse("2020-03-13"),
+                            EventDescription = "What are organic-based fertilizers?" +
+"The broad category of organic - based fertilizers includes diverse formulations of products that provide plants with nutrients and / or improve organic matter in the soil.They are applied to plants and / or soils to improve soil fertility," +
+                            "plant vigour,"
+                            + "produce quality and yield.Organic - based fertilizers are used in both organic and conventional agriculture."
+
++ "Organic - based fertilizers include three specific product categories: organic fertilizers,"
+                            + "organo - mineral fertilizers and organic soil improvers.ECOFI defines and differentiates these three linked product categories as follows:"
+
++ "Organic fertilizer: a fertilizer whose main function is to provide nutrients under organic forms from organic materials of plant and / or animal origin." +
+ "Organo - mineral fertilizer: a complex fertilizer obtained by industrial co - formulation of one or more inorganic fertilizers with one or more organic fertilizers and / or organic soil improvers into solid forms(with the exception of dry mixes) or liquids."
++ "Organic soil improver: a soil improver containing carbonaceous materials of plant and / or animal origin,"
+                            + "whose main function is to maintain or increase the soil organic matter content.",
                             EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Food").ID
                         },
                         new Event
@@ -63,7 +76,7 @@ namespace NCSustainability.Data
                             Edate = DateTime.Parse("2020-02-12"),
                             EventDescription = "Encouraging people for using their own mugs for coffee / Tea",
                             EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Waste Management").ID
-                        });
+                        }) ;
                     context.SaveChanges();
                 }
                 if (!context.subscribers.Any())
