@@ -124,6 +124,41 @@ namespace NCSustainability.Data
                         });
                     context.SaveChanges();
                 }
+
+                if (!context.FunFacts.Any())
+                {
+                    context.FunFacts.AddRange(
+                        new FunFact
+                        {
+                            Title = "Collected the Bio-degradable waste",
+                            Email = "fertilizer@ncstudents.niagaracollege.ca",
+                            FunFactDescription = "I collected the waste from whole month..."
+                        },
+                        new FunFact
+                        {
+                            Title = "Planted trees",
+                            Email = "trees@ncstudents.niagaracollege.ca",
+                            FunFactDescription = "dfsnk lvaadnj ie wvu oi iydf iweu rugiowerng ieuorn  g"
+                        }) ;
+                    context.SaveChanges();
+                }
+                if (!context.LikedFunfacts.Any())
+                {
+                    context.LikedFunfacts.AddRange(
+                        new LikedFunfact
+                        {
+                            LName = "Amarbir",
+                            Email = "asingh457@ncstudents.niagaracollege.ca",
+                            FunfactID = context.FunFacts.FirstOrDefault(cd => cd.Title == "Collected the Bio-degradable waste").ID
+                        },
+                        new LikedFunfact
+                        {
+                            LName = "karanvir",
+                            Email = "ksingh238@ncstudents.niagaracollege.ca",
+                            FunfactID = context.FunFacts.FirstOrDefault(cd => cd.Title == "Collected the Bio-degradable waste").ID
+                        });
+                    context.SaveChanges();
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ namespace NCSustainability.Models
         [Display(Name ="Name")]
         [Required(ErrorMessage = "Please enter your name.")]
         public string Name { get; set; }
+
         [Display(Name = "Email Address")]
         [RegularExpression(@"^([\w]*[\w\.]*(?!\.)@ncstudents.niagaracollege.ca)", ErrorMessage ="Email address should end with 'niagaracollege.ca'")]
         [Required(ErrorMessage = "Please enter email address.")]
