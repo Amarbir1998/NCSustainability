@@ -42,6 +42,7 @@ namespace NCSustainability.Areas.Identity.Pages.Account
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
+            [RegularExpression(@"^([\w]*[\w\.]*(?!\.)@ncstudents.niagaracollege.ca)", ErrorMessage = "Email address should end with '@ncstudents.niagaracollege.ca'")]
             public string Email { get; set; }
 
             [Required]
