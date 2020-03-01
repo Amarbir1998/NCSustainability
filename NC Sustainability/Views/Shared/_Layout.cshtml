@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>@ViewData["Title"] - NC_New_Project</title>
+    <title>@ViewData["Title"] - NC Sustainability</title>
     <style>
         body {
-            padding-top:100px;
+            padding-top: 100px;
         }
 
         .aligntobottom {
@@ -47,19 +47,23 @@
                             <div>
                                 <ul>
                                     <li class="nav-item active">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">About Us </a>
+                                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">HOME </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">News & Events </a>
+                                        <a class="nav-link text-white" asp-area="" asp-controller="Events" asp-action="Index">EVENTS </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Schools & Units </a>
+                                        <a class="nav-link text-white" asp-area="" asp-controller="Subscribers" asp-action="Index">SUBSCRIBERS</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" href="~/Identity/Account/Register">Register</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Data Hub</a>
+                                        <a class="nav-link text-white" href="~/Identity/Account/Login">LOG IN</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Login</a>
+                                        <a class="nav-link text-white" href="~/Identity/Account/Logout">LOG OUT</a>
                                     </li>
                                 </ul>
                             </div>
@@ -75,30 +79,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">About Us </a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">HOME </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">News & Events </a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Events" asp-action="Index">EVENTS </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Schools & Units </a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Subscribers" asp-action="Index">SUBSCRIBERS </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Data Hub</a>
+                            <a class="nav-link text-white" href="~/Identity/Account/Register">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Login</a>
+                            <a class="nav-link text-white" href="~/Identity/Account/Login">LOG IN</a>
                         </li>
-                        @*<li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-black-50" href="#" id="navbardrop" data-toggle="dropdown">
-                                    Promotions
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Events</a>
-                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Events Categories</a>
-                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Link3</a>
-                                </div>
-                            </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="~/Identity/Account/Logout">LOG OUT</a>
+                        </li>
                     </ul>
                 </div>
             </div>

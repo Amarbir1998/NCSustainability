@@ -232,7 +232,6 @@ C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\
 C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.dll
 C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.pdb
 C:\Users\Administrator\Source\Repos\NCSustainabilit\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.CopyComplete
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

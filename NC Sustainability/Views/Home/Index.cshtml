@@ -81,53 +81,82 @@
 </div>
 <div class="events">
     <h2 class="event">Events</h2>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/first_event.png" class="d-block w-100" alt="First Event"></a>
+    <div class="row text-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    @{
+                        if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                        {
+                            string imageBase64 = Convert.ToBase64String(item.imageContent);
+                            string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                            <img class="card-img-top" src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" height="200" width="300" />
+                        }
+                    }
+                    <div class="card-body">
+                        <h4 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h4>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Edate)</p>
+                        @*<p class="card-text">@Html.DisplayFor(modelItem => item.EventDescription)</p>*@
                     </div>
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/second_event.jpg" class="d-block w-100" alt="Second Event"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/thirdEvent.png" class="d-block w-100" alt="Third Event"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/Fourth_Event.png" class="d-block w-100" alt="Fourth Event"></a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/fivth_Event.jpg" class="d-block w-100" alt="First Event"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/sixth_Event.jpg" class="d-block w-100" alt="Second Event"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/seventh_Event.jpg" class="d-block w-100" alt="Third Event"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="#"><img src="~/Images/eirth_Event.jpg" class="d-block w-100" alt="Fourth Event"></a>
+                    <div class="card-footer">
+                        @*<a href="#" class="btn btn-primary">Find Out More!</a>*@
+                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Find Out More!</a>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span id="previous" class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span id="previous" class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+
+        }
     </div>
+
+    <a asp-action="Subscribe" class="btn btn-primary">Subscribe</a>
+    @*<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/first_event.png" class="d-block w-100" alt="First Event"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/second_event.jpg" class="d-block w-100" alt="Second Event"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/thirdEvent.png" class="d-block w-100" alt="Third Event"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/Fourth_Event.png" class="d-block w-100" alt="Fourth Event"></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/fivth_Event.jpg" class="d-block w-100" alt="First Event"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/sixth_Event.jpg" class="d-block w-100" alt="Second Event"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/seventh_Event.jpg" class="d-block w-100" alt="Third Event"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#"><img src="~/Images/eirth_Event.jpg" class="d-block w-100" alt="Fourth Event"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span id="previous" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span id="previous" class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>*@
     <div>
         <p class="para-2">
             News<b><a class="hello" href="#"> VIEW ALL > </a></b>
@@ -190,36 +219,6 @@
 </div>
 
 
-@*option 2*@
-<div class="row text-center">
-    @foreach (var item in Model)
-    {
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100">
-                @{
-                    if (item.imageContent != null && item.imageMimeType.Contains("image"))
-                    {
-                        string imageBase64 = Convert.ToBase64String(item.imageContent);
-                        string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
-                        <img class="card-img-top" src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" height="200" width="300" />
-                    }
-                }
-                <div class="card-body">
-                    <h4 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h4>
-                    <p class="card-text">@Html.DisplayFor(modelItem => item.Edate)</p>
-                    @*<p class="card-text">@Html.DisplayFor(modelItem => item.EventDescription)</p>*@
-                </div>
-                <div class="card-footer">
-                    @*<a href="#" class="btn btn-primary">Find Out More!</a>*@
-                    <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Find Out More!</a>
-                </div>
-            </div>
-        </div>
-
-    }
-</div>
-
-<a asp-action="Subscribe" class="btn btn-primary">Subscribe</a>
 
 
 

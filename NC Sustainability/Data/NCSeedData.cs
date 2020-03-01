@@ -37,43 +37,33 @@ namespace NCSustainability.Data
                     context.Events.AddRange(
                         new Event
                         {
-                            Title = "Sample",
-                            Edate = DateTime.Parse("2020-01-30"),
-                            EventDescription = "Growing plants nearby places in town",
+                            Title = "Planting Trees Event",
+                            Edate = DateTime.Parse("2020-02-21"),
+                            EventDescription = "Join NC for this hands-on workshop taught by Stefan Weber, an experienced grower and educator. Discover the great diversity and beauty of southern Ontario’s flora and their important role in native plant protection. Learn how to identify, collect, store and propagate the seeds of select native herbaceous (soft-stemmed) plants, and tour the TBG’s new native seedbeds and plantings. Lists of easy-to-grow species for home gardens and ravine restoration will be provided.",
                             EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Academic").ID
 
                         },
                         new Event
                         {
-                            Title = "D",
-                            Edate = DateTime.Parse("2020-02-05"),
+                            Title = "Donations",
+                            Edate = DateTime.Parse("2020-04-05"),
                             EventDescription = "Donating winter clothes to needy people",
                             EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Academic").ID
                         },
                         new Event
                         {
-                            imageFileName = "ProtectTheNature.png",
-                           
                             Title = "Protect The Nature",
-                            Edate = DateTime.Parse("2020-03-13"),
+                            Edate = DateTime.Parse("2020-04-13"),
                             EventDescription = "What are organic-based fertilizers?" +
 "The broad category of organic - based fertilizers includes diverse formulations of products that provide plants with nutrients and / or improve organic matter in the soil.They are applied to plants and / or soils to improve soil fertility," +
                             "plant vigour,"
-                            + "produce quality and yield.Organic - based fertilizers are used in both organic and conventional agriculture."
-
-+ "Organic - based fertilizers include three specific product categories: organic fertilizers,"
-                            + "organo - mineral fertilizers and organic soil improvers.ECOFI defines and differentiates these three linked product categories as follows:"
-
-+ "Organic fertilizer: a fertilizer whose main function is to provide nutrients under organic forms from organic materials of plant and / or animal origin." +
- "Organo - mineral fertilizer: a complex fertilizer obtained by industrial co - formulation of one or more inorganic fertilizers with one or more organic fertilizers and / or organic soil improvers into solid forms(with the exception of dry mixes) or liquids."
-+ "Organic soil improver: a soil improver containing carbonaceous materials of plant and / or animal origin,"
-                            + "whose main function is to maintain or increase the soil organic matter content.",
+                            + "produce quality and yield.Organic - based fertilizers are used in both organic and conventional agriculture.",
                             EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Food").ID
                         },
                         new Event
                         {
-                            Title = "BY",
-                            Edate = DateTime.Parse("2020-02-12"),
+                            Title = "Plastic Free Environment",
+                            Edate = DateTime.Parse("2020-05-12"),
                             EventDescription = "Encouraging people for using their own mugs for coffee / Tea",
                             EventCategoryID = context.EventCategories.FirstOrDefault(cd => cd.EventCategoryName == "Waste Management").ID
                         }) ;
@@ -125,40 +115,40 @@ namespace NCSustainability.Data
                     context.SaveChanges();
                 }
 
-                if (!context.FunFacts.Any())
-                {
-                    context.FunFacts.AddRange(
-                        new FunFact
-                        {
-                            Title = "Collected the Bio-degradable waste",
-                            Email = "fertilizer@ncstudents.niagaracollege.ca",
-                            FunFactDescription = "I collected the waste from whole month..."
-                        },
-                        new FunFact
-                        {
-                            Title = "Planted trees",
-                            Email = "trees@ncstudents.niagaracollege.ca",
-                            FunFactDescription = "dfsnk lvaadnj ie wvu oi iydf iweu rugiowerng ieuorn  g"
-                        }) ;
-                    context.SaveChanges();
-                }
-                if (!context.LikedFunfacts.Any())
-                {
-                    context.LikedFunfacts.AddRange(
-                        new LikedFunfact
-                        {
-                            LName = "Amarbir",
-                            Email = "asingh457@ncstudents.niagaracollege.ca",
-                            FunfactID = context.FunFacts.FirstOrDefault(cd => cd.Title == "Collected the Bio-degradable waste").ID
-                        },
-                        new LikedFunfact
-                        {
-                            LName = "karanvir",
-                            Email = "ksingh238@ncstudents.niagaracollege.ca",
-                            FunfactID = context.FunFacts.FirstOrDefault(cd => cd.Title == "Collected the Bio-degradable waste").ID
-                        });
-                    context.SaveChanges();
-                }
+                //if (!context.FunFacts.Any())
+                //{
+                //    context.FunFacts.AddRange(
+                //        new FunFact
+                //        {
+                //            Title = "Collected the Bio-degradable waste",
+                //            Email = "fertilizer@ncstudents.niagaracollege.ca",
+                //            FunFactDescription = "I collected the waste from whole month..."
+                //        },
+                //        new FunFact
+                //        {
+                //            Title = "Planted trees",
+                //            Email = "trees@ncstudents.niagaracollege.ca",
+                //            FunFactDescription = "dfsnk lvaadnj ie wvu oi iydf iweu rugiowerng ieuorn  g"
+                //        }) ;
+                //    context.SaveChanges();
+                //}
+                //if (!context.LikedFunfacts.Any())
+                //{
+                //    context.LikedFunfacts.AddRange(
+                //        new LikedFunfact
+                //        {
+                //            LName = "Amarbir",
+                //            Email = "asingh457@ncstudents.niagaracollege.ca",
+                //            FunfactID = context.FunFacts.FirstOrDefault(cd => cd.Title == "Collected the Bio-degradable waste").ID
+                //        },
+                //        new LikedFunfact
+                //        {
+                //            LName = "karanvir",
+                //            Email = "ksingh238@ncstudents.niagaracollege.ca",
+                //            FunfactID = context.FunFacts.FirstOrDefault(cd => cd.Title == "Collected the Bio-degradable waste").ID
+                //        });
+                //    context.SaveChanges();
+                //}
             }
         }
     }
