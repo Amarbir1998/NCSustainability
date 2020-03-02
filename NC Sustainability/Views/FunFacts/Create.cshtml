@@ -1,0 +1,82 @@
+﻿@model NCSustainability.Models.FunFact
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>FunFact</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group custom-file mt-3">
+                <label class="control-label custom-file-label">Picture File:</label>
+                <input type="file" class="custom-file-input" name="thePicture" /><br />
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FunFactDescription" class="control-label"></label>
+                @Html.TextAreaFor(m => m.FunFactDescription, new { @class = "form-control" })
+                <span asp-validation-for="FunFactDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Cancel</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/refreshDDL.js"></script>
+    <script type="text/javascript">
+        $('#submitCreate').click(function (event) {
+            event.preventDefault();
+            var form = $('#createCategoryForm');
+            if (form.valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function () {
+                        $('#addCategoryModal').modal('hide');
+                    },
+                    error: function () {
+                        alert("Create Failed.  There was a problem adding the record.");
+                    }
+                });
+            }
+            return false;
+        });
+        $('#addCategoryModal').on('hide.bs.modal', function () {
+            $('#createCategoryForm').find("input[type=text], textarea, select").val("");//to clear the data in the popup
+            refreshDDL('EventCategoryID', 'Events/GetEventCategories', true, 'Select an Event Category', true);
+        });
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    // Add the following code if you want the name of the file appear on select
+            $(".custom-file-input").on("change", function() {
+              var fileName = $(this).val().split("\\").pop();
+              $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+    </script>
+}

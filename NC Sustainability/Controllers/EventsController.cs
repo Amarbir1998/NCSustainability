@@ -216,7 +216,7 @@ namespace NCSustainability.Controllers
         }
         private SelectList CategorySelectList(int? selectedId)
         {
-            return new SelectList(_context.EventCategories
+            return new SelectList(_context.FunFact
                 .OrderBy(d => d.EventCategoryName), "ID", "EventCategoryName", selectedId);
         }
         [HttpGet]

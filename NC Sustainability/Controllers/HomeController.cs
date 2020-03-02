@@ -101,7 +101,7 @@ namespace NCSustainability.Controllers
 
         private void PopulateAssignedEventCategoryData(Subscriber subscriber)
         {
-            var allCategories = _context.EventCategories;
+            var allCategories = _context.FunFact;
             var pCategories = new HashSet<int>(subscriber.EventSubscribers.Select(b => b.EventCategoryID));
             var checkBoxes = new List<AssignedOptionVM>();
             foreach (var category in allCategories)

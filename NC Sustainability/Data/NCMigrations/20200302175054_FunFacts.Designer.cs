@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NCSustainability.Data;
 
 namespace NCSustainability.Data.NCMigrations
 {
     [DbContext(typeof(NCDbContext))]
-    partial class NCDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200302175054_FunFacts")]
+    partial class FunFacts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,7 +63,7 @@ namespace NCSustainability.Data.NCMigrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("EventCategory");
+                    b.ToTable("FunFact");
                 });
 
             modelBuilder.Entity("NCSustainability.Models.EventSubscriber", b =>
@@ -92,14 +94,6 @@ namespace NCSustainability.Data.NCMigrations
                     b.Property<string>("Title")
                         .IsRequired();
 
-                    b.Property<byte[]>("imageContent");
-
-                    b.Property<string>("imageFileName")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("imageMimeType")
-                        .HasMaxLength(256);
-
                     b.HasKey("ID");
 
                     b.ToTable("FunFacts");
@@ -127,56 +121,6 @@ namespace NCSustainability.Data.NCMigrations
                     b.HasIndex("FunfactID");
 
                     b.ToTable("LikedFunfacts");
-                });
-
-            modelBuilder.Entity("NCSustainability.Models.New", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .IsRequired();
-
-                    b.Property<DateTime>("Pdate");
-
-                    b.Property<byte[]>("image");
-
-                    b.Property<string>("imageFileName")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("imageMimeType")
-                        .HasMaxLength(256);
-
-                    b.HasKey("ID");
-
-                    b.ToTable("News");
-                });
-
-            modelBuilder.Entity("NCSustainability.Models.Promotion", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .IsRequired();
-
-                    b.Property<DateTime>("EPdate");
-
-                    b.Property<DateTime>("SPdate");
-
-                    b.Property<byte[]>("image");
-
-                    b.Property<string>("imageFileName")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("imageMimeType")
-                        .HasMaxLength(256);
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Promotions");
                 });
 
             modelBuilder.Entity("NCSustainability.Models.Subscriber", b =>

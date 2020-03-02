@@ -9,6 +9,8 @@
   <ItemGroup>
     <Compile Remove="Data\NCMigrations\20200222191026_EventCatSubscriber.cs" />
     <Compile Remove="Data\NCMigrations\20200222191026_EventCatSubscriber.Designer.cs" />
+    <Compile Remove="Data\NCMigrations\20200302175843_PicsFunfacts.cs" />
+    <Compile Remove="Data\NCMigrations\20200302175843_PicsFunfacts.Designer.cs" />
   </ItemGroup>
 
 

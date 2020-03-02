@@ -1,0 +1,84 @@
+﻿@model IEnumerable<NCSustainability.Models.FunFact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Post New Fun</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FunFactDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                        {
+                            string imageBase64 = Convert.ToBase64String(item.imageContent);
+                            string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                            <img src="@imageSrc" alt="Profile Picture of @item.Title" title="Profile Picture of @item.Title" style="max-height: 100px; max-width: 120px" class="img-fluid rounded" />
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @{
+                        int specCount = item.FunFactDescription.Length;
+                        if (specCount > 0)
+                        {
+                            string firstSpec = item.FunFactDescription.Substring(0, 30);
+                            if (specCount > 30)
+                            {
+                                string specList = item.FunFactDescription;
+
+
+                                <a tabindex="0" class="text-body" role="button" data-toggle="popover"
+                                   data-trigger="focus" title="@item.FunFactDescription" data-placement="bottom" data-content="@specList">@firstSpec ... <span class="badge badge-info">See more</span></a>
+                            }
+                            else
+                            {
+                                @firstSpec
+                            }
+                        }
+                    }
+                </td>
+                <td>
+                    @*<a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Edit</a> |*@
+                    <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-primary">Details</a> @*|
+                        <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-primary">Delete</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+}

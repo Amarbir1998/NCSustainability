@@ -34,13 +34,17 @@ namespace NCSustainability.Data
         }
         public DbSet<Event> Events { get; set; }
 
+
+        public DbSet<EventCategory> FunFact { get; set; }
+
         public DbSet<New> News { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<EventCategory> EventCategories { get; set; }
+
         public DbSet<EventSubscriber> EventSubscribers { get; set; }
         public DbSet<Subscriber> subscribers { get; set; }
-        //public DbSet<LikedFunfact> LikedFunfacts { get; set; }
-        //public DbSet<FunFact> FunFacts { get; set; }
+        public DbSet<LikedFunfact> LikedFunfacts { get; set; }
+        public DbSet<FunFact> FunFacts { get; set; }
 
         public DbSet<AssignedOptionVM> AssignedOptionVM { get; set; }
         //public object News { get; internal set; }
@@ -50,10 +54,10 @@ namespace NCSustainability.Data
             modelBuilder.HasDefaultSchema("dbo");
 
 
-            ////Add a unique index to the Email Address
-            //modelBuilder.Entity<LikedFunfact>()
-            //.HasIndex(p => p.Email)
-            //.IsUnique();
+            //Add a unique index to the Email Address
+            modelBuilder.Entity<LikedFunfact>()
+            .HasIndex(p => p.Email)
+            .IsUnique();
 
             //Many to Many Intersection Primary Key
             modelBuilder.Entity<EventSubscriber>()

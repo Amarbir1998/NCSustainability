@@ -24,7 +24,7 @@ namespace NC_Sustainability.Controllers
         public async Task<IActionResult> Index()
         {
             ViewData["CategoryID"] = new SelectList(_context
-                .EventCategories
+                .FunFact
                 .OrderBy(c => c.EventCategoryName), "ID", "EventCategoryName");
 
             var subscribers = from d in _context.subscribers
@@ -200,7 +200,7 @@ namespace NC_Sustainability.Controllers
 
         private void PopulateAssignedEventCategoryData(Subscriber subscriber)
         {
-            var allCategories = _context.EventCategories;
+            var allCategories = _context.FunFact;
             var pCategories = new HashSet<int>(subscriber.EventSubscribers.Select(b => b.EventCategoryID));
             var checkBoxes = new List<AssignedOptionVM>();
             foreach (var category in allCategories)
@@ -226,7 +226,7 @@ namespace NC_Sustainability.Controllers
             var selectedCategoriesHS = new HashSet<string>(selectedOptions);
             var EventSubscribersHS = new HashSet<int>
                 (subscriberToUpdate.EventSubscribers.Select(c => c.EventCategoryID));//IDs of the currently selected conditions
-            foreach (var category in _context.EventCategories)
+            foreach (var category in _context.FunFact)
             {
                 if (selectedCategoriesHS.Contains(category.ID.ToString()))
                 {
