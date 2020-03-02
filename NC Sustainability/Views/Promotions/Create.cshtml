@@ -1,11 +1,11 @@
-﻿@model NCSustainability.Models.FunFact
+﻿@model NCSustainability.Models.Promotion
 
 @{
     ViewData["Title"] = "Create";
 }
 
 
-<h4>FunFact</h4>
+<h4>Promotion</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -16,19 +16,19 @@
                 <input type="file" class="custom-file-input" name="thePicture" /><br />
             </div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label asp-for="SPdate" class="control-label"></label>
+                <input asp-for="SPdate" class="form-control" />
+                <span asp-validation-for="SPdate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FunFactDescription" class="control-label"></label>
-                @Html.TextAreaFor(m => m.FunFactDescription, new { @class = "form-control" })
-                <span asp-validation-for="FunFactDescription" class="text-danger"></span>
+                <label asp-for="EPdate" class="control-label"></label>
+                <input asp-for="EPdate" class="form-control" />
+                <span asp-validation-for="EPdate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -1,8 +1,9 @@
 ﻿@model NCSustainability.Models.FunFact
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Fun";
 }
+
+
 
 
 <h4>FunFact</h4>
@@ -40,6 +41,7 @@
 
 
 
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script src="~/js/refreshDDL.js"></script>
@@ -71,10 +73,12 @@
             var fileName = $(this).val().split("\\").pop();
             $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
         });
-    // Add the following code if you want the name of the file appear on select
-            $(".custom-file-input").on("change", function() {
-              var fileName = $(this).val().split("\\").pop();
-              $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-            });
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
     </script>
 }
+
+

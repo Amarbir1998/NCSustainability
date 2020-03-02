@@ -1,0 +1,81 @@
+﻿@model IEnumerable<NCSustainability.Models.Promotion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Promotions</h1>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create New Promotion</a>
+    </p>
+}
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SPdate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EPdate)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @{
+                            if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                            {
+                                string imageBase64 = Convert.ToBase64String(item.imageContent);
+                                string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                                <img src="@imageSrc" alt="Profile Picture of @item.ID" title="Profile Picture of @item.ID" style="max-height: 100px; max-width: 120px" class="img-fluid rounded" />
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{
+                            int specCount = item.Description.Length;
+                            if (specCount > 0)
+                            {
+                                string firstSpec = item.Description.Substring(0, 30);
+                                if (specCount > 30)
+                                {
+                                    string specList = item.Description;
+
+
+                                    <a tabindex="0" class="text-body" role="button" data-toggle="popover"
+                                       data-trigger="focus" title="@item.Description" data-placement="bottom" data-content="@specList">@firstSpec ... <span class="badge badge-info">See more</span></a>
+                                }
+                                else
+                                {
+                                    @firstSpec
+                                }
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SPdate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EPdate)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @section Scripts {
+        <script type="text/javascript">
+            $(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+        </script>
+    }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NCSustainability.Data;
@@ -96,6 +98,47 @@ namespace NCSustainability.Controllers
             }
             PopulateAssignedEventCategoryData(subscriber);
             return View(subscriber);
+        }
+
+
+        // GET: FunFacts/Create
+        public IActionResult Fun()
+        {
+            return View();
+        }
+
+        // POST: EventCategories/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Fun([Bind("ID,Title,Email,FunFactDescription")] FunFact funFacts, IFormFile thePicture)
+        {
+            if (ModelState.IsValid)
+            {
+                if (thePicture != null)
+                {
+                    string mimeType = thePicture.ContentType;
+                    long fileLength = thePicture.Length;
+                    if (!(mimeType == "" || fileLength == 0))//Looks like we have a file!!!
+                    {
+                        if (mimeType.Contains("image"))
+                        {
+                            using (var memoryStream = new MemoryStream())
+                            {
+                                await thePicture.CopyToAsync(memoryStream);
+                                funFacts.imageContent = memoryStream.ToArray();
+                            }
+                            funFacts.imageMimeType = mimeType;
+                            funFacts.imageFileName = thePicture.FileName;
+                        }
+                    }
+                }
+                _context.Add(funFacts);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(funFacts);
         }
 
 

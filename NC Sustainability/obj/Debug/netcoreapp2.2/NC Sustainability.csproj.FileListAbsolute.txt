@@ -349,3 +349,6 @@ C:\Users\Administrator\Source\Repos\NCSustainabili\NC Sustainability\obj\Debug\n
 C:\Users\Administrator\Source\Repos\NCSustainabili\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfoInputs.cache
 C:\Users\Administrator\Source\Repos\NCSustainabili\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfo.cs
 >>>>>>> 07ef2edf7137d3f4d6364f7b5c05434358dc8e54
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Fun.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Create.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Index.cshtml.g.cs

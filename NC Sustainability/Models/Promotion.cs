@@ -8,9 +8,12 @@ namespace NCSustainability.Models
 {
     public class Promotion
     {
+        public Promotion()
+        {
+        }
         public int ID { get; set; }
         [ScaffoldColumn(false)]
-        public byte[] image { get; set; }
+        public byte[] imageContent { get; set; }
 
         [StringLength(256)]
         [ScaffoldColumn(false)]
