@@ -34,6 +34,8 @@ namespace NCSustainability.Data
         }
         public DbSet<Event> Events { get; set; }
 
+        public DbSet<New> News { get; set; }
+        public DbSet<Promotion> Promotions { get; set; }
         public DbSet<EventCategory> EventCategories { get; set; }
         public DbSet<EventSubscriber> EventSubscribers { get; set; }
         public DbSet<Subscriber> subscribers { get; set; }
@@ -41,7 +43,7 @@ namespace NCSustainability.Data
         //public DbSet<FunFact> FunFacts { get; set; }
 
         public DbSet<AssignedOptionVM> AssignedOptionVM { get; set; }
-
+        //public object News { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

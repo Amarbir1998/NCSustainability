@@ -101,7 +101,7 @@
                     </div>
                     <div class="card-footer">
                         @*<a href="#" class="btn btn-primary">Find Out More!</a>*@
-                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Find Out More!</a>
+                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.ID">Detail info about event</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
         }
     </div>
 
-    <a asp-action="Subscribe" class="btn btn-primary">Subscribe</a>
+    <a asp-action="Subscribe" class="btn btn-primary" >Subscribe</a>
     @*<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
 
@@ -159,65 +159,43 @@
         </div>*@
     <div>
         <p class="para-2">
-            News<b><a class="hello" href="#"> VIEW ALL > </a></b>
+            News
         </p>
         <div id="carouselExampleControlss" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-
-                <div class="carousel-item active">
+                <div class="container">
                     <div class="row">
-                        <div class="col-3">
-                            <div class="n-image">
-                                <h5>February 18, 2020</h5>
-                                <img id="img-1" src="~/Images/sustainbility latest news.jpg" class="d-block w-100" alt="First Event">
+                        <div class="col-md-4 mb-5">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-3">
-                            <div class="n-image">
-                                <img src="~/Images/second_event.jpg" class="d-block w-100" alt="Second Event">
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="n-image">
-                                <img id="img-1" src="~/Images/thirdEvent.png" class="d-block w-100" alt="Third Event">
+                        <div class="col-md-4 mb-5">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="n-image">
-                                <img id="img-1" src="~/Images/sustainability.jpg" class="d-block w-100" alt="First Event">
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="n-image">
-                                <img id="img-1" src="~/Images/sustainbility latest news.jpg" class="d-block w-100" alt="Second Event">
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="n-image">
-                                <img id="img-1" src="~/Images/first_event.png" class="d-block w-100" alt="Third Event">
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControlss" role="button" data-slide="prev">
-                <span id="previous" class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControlss" role="button" data-slide="next">
-                <span id="previous" class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </div>
+    
 </div>
-
 
 
 
