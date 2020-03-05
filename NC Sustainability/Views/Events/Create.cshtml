@@ -7,49 +7,73 @@
 <h1>Create a New Event</h1>
 
 <hr />
-        <form asp-action="Create" method="post" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-md-4">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group">
-                        <label asp-for="Title" class="control-label"></label>
-                        <input asp-for="Title" class="form-control" />
-                        <span asp-validation-for="Title" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Edate" class="control-label"></label>
-                        <input asp-for="Edate" class="form-control" />
-                        <span asp-validation-for="Edate" class="text-danger"></span>
-                    </div>
-                    <div class="form-group custom-file mt-3">
-                        <label class="control-label custom-file-label">Picture File:</label>
-                        <input type="file" class="custom-file-input" name="thePicture" /><br />
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="EventCategoryID" class="control-label"></label>
-                        <select asp-for="EventCategoryID" class="form-control" asp-items="ViewBag.EventCategoryID"></select>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
-                        <a asp-action="Index" class="btn btn-primary">Cancel</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label asp-for="EventDescription" class="control-label"></label>
-                        @Html.TextAreaFor(m => m.EventDescription, new { @class = "form-control" })
-                        <span asp-validation-for="EventDescription" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <a class="btn btn-success" onclick="alert('Notififcations Sent Successfully')">Click to send Email Notification</a><br />
-                    </div>
-                </div>
+<!-- Modal-->
+<div class="modal fade" id="addEventCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Add New Event Category</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
-        </form>
-    
+            <div class="modal-body">
+                @{ var d = new NCSustainability.Models.EventCategory();
+                    <partial name="_EventCategoryCreate" model="d" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Edate" class="control-label"></label>
+                <input asp-for="Edate" class="form-control" />
+                <span asp-validation-for="Edate" class="text-danger"></span>
+            </div>
+            <div class="form-group custom-file mt-3">
+                <label class="control-label custom-file-label">Picture File:</label>
+                <input type="file" class="custom-file-input" name="thePicture" /><br />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EventCategoryID" class="control-label"></label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" id="nowAddEventCategory" data-toggle="modal" data-target="#addEventCategoryModal" type="button"><strong>+</strong></button>
+                    </div>
+                    <select asp-for="EventCategoryID" class="form-control" asp-items="ViewBag.EventCategoryID">
+                        <option>Select an Event Category</option>
+                    </select>
+                </div>
+                <span asp-validation-for="EventCategoryID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-primary">Cancel</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="EventDescription" class="control-label"></label>
+                @Html.TextAreaFor(m => m.EventDescription, new { @class = "form-control" })
+                <span asp-validation-for="EventDescription" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-success" onclick="alert('Notififcations Sent Successfully')">Click to send Email Notification</a><br />
+            </div>
+        </div>
+    </div>
+</form>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
@@ -82,10 +106,35 @@
             var fileName = $(this).val().split("\\").pop();
             $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
         });
-    // Add the following code if you want the name of the file appear on select
-            $(".custom-file-input").on("change", function() {
-              var fileName = $(this).val().split("\\").pop();
-              $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-            });
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+    <script src="~/js/refreshDDL.js"></script>
+    <script type="text/javascript">
+        $('#submitCreate').click(function (event) {
+            event.preventDefault();
+            var form = $('#createEventCategoryForm');
+            if (form.valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function () {
+                        $('#addEventCategoryModal').modal('hide');
+                    },
+                    error: function () {
+                        alert("Create Failed.  There was a problem adding the record.");
+                    }
+                });
+            }
+            return false;
+        });
+        $('#addEventCategoryModal').on('hide.bs.modal', function () {
+            $('#createEventCategoryForm').find("input[type=text], textarea, select").val("");//to clear the data in the popup
+            refreshDDL('EventCategoryID', 'Events/GetEventcategories', true, 'Select an Event category', true);
+        });
     </script>
 }

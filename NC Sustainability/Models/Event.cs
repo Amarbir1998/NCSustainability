@@ -21,7 +21,8 @@ namespace NCSustainability.Models
 
         [Display(Name = "Event Date")]
         [Required(ErrorMessage = "Event Date is required.")]
-        [DisplayFormat(DataFormatString = "{0:MMMM dd, yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:MMMM dd, yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Edate { get; set; }
 
         [Display(Name = "Event Description")]
