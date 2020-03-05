@@ -1,7 +1,6 @@
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.GenerateResource.cache
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cache
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cs

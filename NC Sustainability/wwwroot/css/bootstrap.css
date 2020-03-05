@@ -3449,13 +3449,13 @@ tbody.collapse.show {
 }
 
     .dropdown-item:hover, .dropdown-item:focus {
-        color: #16181b;
+        color: #6c757d;
         text-decoration: none;
-        background-color: #f8f9fa;
+        background-color: #fff;
     }
 
     .dropdown-item.active, .dropdown-item:active {
-        color: #fff;
+        color: #212529;
         text-decoration: none;
         background-color: #007bff;
     }

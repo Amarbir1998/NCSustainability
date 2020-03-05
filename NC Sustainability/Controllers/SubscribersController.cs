@@ -67,7 +67,7 @@ namespace NC_Sustainability.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Email")] Subscriber subscriber, string[] selectedOptions)
+        public async Task<IActionResult> Create([Bind("ID,Name,Email,Phone")] Subscriber subscriber, string[] selectedOptions)
         {
             try
             {
@@ -140,26 +140,30 @@ namespace NC_Sustainability.Controllers
             //Update the Category subscribed
             UpdateEventSubscribers(selectedOptions, subscriberToUpdate);
 
-
-            if (ModelState.IsValid)
+            if (await TryUpdateModelAsync<Subscriber>(subscriberToUpdate, "",
+                p => p.Name, p => p.Email, p => p.Phone, p => p.EventSubscribers))
             {
-                try
+
+                if (ModelState.IsValid)
                 {
-                    _context.Update(subscriberToUpdate);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SubscriberExists(subscriberToUpdate.ID))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(subscriberToUpdate);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!SubscriberExists(subscriberToUpdate.ID))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(subscriberToUpdate);
         }
