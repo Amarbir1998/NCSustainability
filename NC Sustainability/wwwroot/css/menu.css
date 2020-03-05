@@ -5,9 +5,9 @@
 
 
     img#logo {
-        height: 80px;
-        width: 300px;
-        margin-left: 80px;
+        height: 60px;
+        width: 190px;
+        margin-left: 40px;
         margin-top: 0px;
     }
 
@@ -17,14 +17,20 @@
     }
 
     .carousel-item .img-fluid {
-        width: 100%;
-        max-height: 2100%;
+        width: 500%;
+        max-height: 500%;
+    }
+
+    h5.hypertext-2{
+        height: 60px;
+        width: 60px;
+        margin-right: 100%;
     }
 
 
-
     #carouselFull {
-        width: 200%;
+        width: 100%;
+        height: 800%;
     }
 
     .img-fluid {
@@ -55,8 +61,8 @@
         position: absolute;
         top: 2.0rem;
         left: 0.5rem;
-        width: 70px;
-        height: 65px;
+        width: 40px;
+        height: 45px;
         border-radius: 50%;
         background-color: #0077BE;
         display: flex;
@@ -130,7 +136,7 @@
 
         .menu > div {
             position: absolute;
-            width: 1600px;
+            width: 390px;
             height: 1600px;
             border-radius: 50%;
             top: 50%;
@@ -199,24 +205,28 @@
         width: 100%;
     }
 
+    a#click-event{
+        margin-left: 1000px;
+    }
+
     .leftside {
         background: #0077BE;
         margin-top: 50px;
         color: #fff;
         margin-bottom: 50px;
         margin-left: 0px;
-        width: 580px;
+        width: 290px;
         margin-right: 40px;
-        height: 700px;
+        height: 450px;
     }
 
     .rightside {
         background: #0077BE;
         margin-top: 20px;
         margin-left: 0px;
-        width: 580px;
-        margin-bottom: 50px;
-        height: 500px;
+        width: 290px;
+        /*margin-bottom: 50px;*/
+        height: 450px;
         color: #ffff
     }
 
@@ -233,9 +243,9 @@
     }
 
     h1.fossil-heading {
-        margin-left: 15px;
+        margin-left: 10px;
         color: #fff;
-        font-size: 55px;
+        font-size: 20px;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -248,17 +258,18 @@
 
     p.para-1 {
         word-wrap: break-word;
-        margin-left: 60px;
+        margin-left: 15px;
         width: 400px;
         color: #fff;
         font-weight: 300;
-        font-size: 30px;
+        font-size: 15px;
         margin-top: 0;
+        width: auto;
     }
 
     a.fossil {
-        margin-left: 50px;
-        font-size: 35px;
+        margin-left: 10px;
+        font-size: 20px;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -270,7 +281,8 @@
     }
 
     .fossil-fuel {
-        margin-left: 60px;
+        margin-left: 10px;
+        font-size: 20px;
     }
 
     .carousel-control-prev #previous {
@@ -304,6 +316,14 @@
         font-size: 35px;
     }
 
+    #news-row {
+        width: 300px;
+    }
+
+    img#sustain-pic {
+        width: 268px;
+    }
+
     #carouselExampleControlss {
         width: 200%;
     }
@@ -322,8 +342,9 @@
     .copy {
         margin-left: 10px;
         margin-top: 160%;
-        font-size: 25px;
+        font-size: 12px;
         color: #000;
+        font-weight: 500;
     }
 
     .media {
@@ -360,13 +381,14 @@
         /*margin: 10px 30px;*/
         display: inline-block;
         font-size: 40px;
-        padding: 5px 5px;
+        /*padding: 5px 5px;*/
         background: #3B5998;
         color: white;
         /*border: 1px solid #292929;*/
         transition: .5s;
-        margin-left: 350px;
-        width: 10%;
+        margin-left: 135px;
+        width: 20%;
+        height:7%;
     }
 
     li.social-media1 {
@@ -380,6 +402,8 @@
         transition: .5s;
         margin: 15px 15px;
         margin-top: 50px;
+        height: 7%;
+       
     }
 }
 
@@ -389,9 +413,9 @@
     }
 
     img#logo {
-        height: 80px;
-        width: 300px;
-        margin-left: 80px;
+        height: 60px;
+        width: 190px;
+        margin-left: 40px;
         margin-top: 0px;
     }
 
@@ -408,7 +432,8 @@
 
 
     #carouselFull {
-        width: 190%;
+        width: 100%;
+        height: 800%;
     }
 
     .img-fluid {
@@ -439,14 +464,18 @@
         position: absolute;
         top: 2.0rem;
         left: 0.5rem;
-        width: 70px;
-        height: 65px;
+        width: 40px;
+        height: 45px;
         border-radius: 50%;
         background-color: #0077BE;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 2;
+    }
+
+    #news-row {
+        width: 350px;
     }
 
         .hamburger > div {
@@ -514,8 +543,8 @@
 
         .menu > div {
             position: absolute;
-            width: 1600px;
-            height: 1600px;
+            width: 700px;
+            height: 1200px;
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -589,19 +618,23 @@
         color: #fff;
         margin-bottom: 50px;
         margin-left: 0px;
-        width: 660px;
+        width: 345px;
         margin-right: 40px;
-        height: 700px;
+        height: 450px;
     }
 
     .rightside {
         background: #0077BE;
         margin-top: 20px;
         margin-left: 0px;
-        width: 655px;
-        margin-bottom: 50px;
-        height: 500px;
+        width: 345px;
+        /*margin-bottom: 50px;*/
+        height: 450px;
         color: #ffff
+    }
+
+    img#sustain-pic {
+        width: 318px;
     }
 
     img.image-1 {
@@ -632,17 +665,18 @@
 
     p.para-1 {
         word-wrap: break-word;
-        margin-left: 60px;
+        margin-left: 15px;
         width: 400px;
         color: #fff;
         font-weight: 300;
-        font-size: 30px;
+        font-size: 15px;
         margin-top: 0;
+        width: auto;
     }
 
     a.fossil {
-        margin-left: 50px;
-        font-size: 35px;
+        margin-left: 10px;
+        font-size: 20px;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -655,6 +689,11 @@
 
     .fossil-fuel {
         margin-left: 60px;
+    }
+
+    .fossil-fuel {
+        margin-left: 15px;
+        font-size: 20px;
     }
 
     .carousel-control-prev #previous {
@@ -686,6 +725,7 @@
 
     h2.event {
         font-size: 35px;
+        
     }
 
     #carouselExampleControlss {
@@ -706,8 +746,9 @@
     .copy {
         margin-left: 10px;
         margin-top: 160%;
-        font-size: 25px;
+        font-size: 12px;
         color: #000;
+        font-weight: 500;
     }
 
     .media {
@@ -744,13 +785,14 @@
         /*margin: 10px 30px;*/
         display: inline-block;
         font-size: 40px;
-        padding: 5px 5px;
+        /*padding: 5px 5px;*/
         background: #3B5998;
         color: white;
         /*border: 1px solid #292929;*/
         transition: .5s;
-        margin-left: 350px;
-        width: 10%;
+        margin-left: 135px;
+        width: 20%;
+        height: 7%;
     }
 
     li.social-media1 {
@@ -764,6 +806,7 @@
         transition: .5s;
         margin: 15px 15px;
         margin-top: 50px;
+        height: 7%;
     }
 }
 
@@ -775,9 +818,9 @@
     }
 
     img#logo {
-        height: 80px;
-        width: 300px;
-        margin-left: 80px;
+        height: 60px;
+        width: 190px;
+        margin-left: 40px;
         margin-top: 0px;
     }
 
@@ -825,8 +868,8 @@
         position: absolute;
         top: 2.0rem;
         left: 0.5rem;
-        width: 70px;
-        height: 65px;
+        width: 40px;
+        height: 45px;
         border-radius: 50%;
         background-color: #0077BE;
         display: flex;
@@ -900,7 +943,7 @@
 
         .menu > div {
             position: absolute;
-            width: 1600px;
+            width: 500px;
             height: 1600px;
             border-radius: 50%;
             top: 50%;
