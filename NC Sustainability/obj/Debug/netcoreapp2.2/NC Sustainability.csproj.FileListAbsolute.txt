@@ -352,3 +352,4 @@ C:\Users\Administrator\Source\Repos\NCSustainabili\NC Sustainability\obj\Debug\n
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Fun.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Create.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Index.cshtml.g.cs
+C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_EventCategoryCreate.cshtml.g.cs

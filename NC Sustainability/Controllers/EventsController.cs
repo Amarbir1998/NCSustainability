@@ -220,45 +220,26 @@ namespace NCSustainability.Controllers
                 .OrderBy(d => d.EventCategoryName), "ID", "EventCategoryName", selectedId);
         }
         [HttpGet]
+        private SelectList EventCategorySelectList(int? selectedId)
+        {
+            return new SelectList(_context.EventCategories
+                .OrderBy(d => d.EventCategoryName), "ID", "EventCategoryName", selectedId);
+        }
+        [HttpGet]
+        public JsonResult GetEventCategories(int? id)
+        {
+            return Json(EventCategorySelectList(id));
+        }
         private void PopulateDropDownLists(Event @event = null)
         {
-            ViewData["EventCategoryID"] = CategorySelectList(@event?.EventCategoryID);
+
+            ViewData["EventCategoryID"] = EventCategorySelectList(@event?.EventCategoryID);
         }
 
         private bool EventExists(int id)
         {
             return _context.Events.Any(e => e.ID == id);
         }
-
-        //public void Send(Event @event)
-        //{
-        //    var message = new MimeMessage();
-        //    message.To.AddRange(@event.ToAddresses.Select(x => new MailboxAddress(x.Name, x.Email)));
-        //    message.From.AddRange(@event.FromAddresses.Select(x => new MailboxAddress(x.Name, x.Email)));
-
-        //    message.Subject = @event.Title;
-        //    //We will say we are sending HTML. But there are options for plaintext etc. 
-        //    message.Body = new TextPart("plain")
-        //    {
-        //        Text = @event.EventDescription
-        //    };
-
-        //    //Be careful that the SmtpClient class is the one from Mailkit not the framework!
-        //    using (var emailClient = new MailKit.Net.Smtp.SmtpClient())
-        //    {
-        //        emailClient.ServerCertificateValidationCallback = (s, c, h, e) => true;
-
-        //        emailClient.Connect("smtp-mail.gmail.com",587, false);
-
-
-        //        emailClient.Authenticate("asbhinder3@gmail.com","Amar1234@");
-
-        //        emailClient.Send(message);
-
-        //        emailClient.Disconnect(true);
-        //    }
-
-        //}
 
         public void Send()
         {
@@ -319,39 +300,3 @@ namespace NCSustainability.Controllers
         }
     }
 }
-
-//public void Sesnd()
-//{
-
-//    var message = new MimeMessage();
-//    message.From.Add(new MailboxAddress("Amarbir", "ncsustainability@outlook.com"));
-//    message.To.Add(new MailboxAddress("Karanvir", "singhkaranvir72@gmail.com"));
-//    ///////////////////////////////////////////////////////////////////////////////////////////////
-//    message.Subject = "Email send test";
-//    //We will say we are sending HTML. But there are options for plaintext etc. 
-//    message.Body = new TextPart("plain")
-//    {
-//        Text = @"Testing... Testing email sending..."
-//    };
-
-//    //Be careful that the SmtpClient class is the one from Mailkit not the framework!
-//    using (var emailClient = new SmtpClient())
-//    {
-//        emailClient.ServerCertificateValidationCallback = (s, c, h, e) => true;
-
-//        emailClient.Connect("smtp-mail.outlook.com", 587, false);
-
-//        //Configure an SmtpClient to send the mail.
-
-//        //emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-//        //emailClient.EnableSsl = false;
-//        //emailClient.Host = "relay-hosting.secureserver.net";
-//        //emailClient.Port = 25;
-
-//        emailClient.Authenticate("ncsustainability@outlook.com", "Sustainability1234@");
-
-//        emailClient.Send(message);
-
-//        emailClient.Disconnect(true);
-//    }
-//}

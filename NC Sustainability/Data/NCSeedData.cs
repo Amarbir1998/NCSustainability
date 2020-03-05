@@ -75,22 +75,26 @@ namespace NCSustainability.Data
                         new Subscriber
                         {
                             Name = "Karanvir",
-                            Email = "singhkaranvir72@gmail.com"
+                            Email = "singhkaranvir72@gmail.com",
+                            Phone = "3657788183"
                         },
                         new Subscriber
                         {
                             Name = "Faiyaz",
-                            Email = "mkagzi21@gmail.com"
+                            Email = "mkagzi21@gmail.com",
+                            Phone = "4372238416"
                         },
                         new Subscriber
                         {
                             Name = "Mit",
-                            Email = "shahmit2015@gmail.com"
+                            Email = "shahmit2015@gmail.com",
+                            Phone = "6476748647"
                         },
                         new Subscriber
                         {
                             Name = "Amarbir",
-                            Email = "asingh457@ncstudents.niagaracollege.ca"
+                            Email = "asingh457@ncstudents.niagaracollege.ca",
+                            Phone = "3433339985"
                         });
                     context.SaveChanges();
                 }

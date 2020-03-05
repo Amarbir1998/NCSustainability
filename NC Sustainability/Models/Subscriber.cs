@@ -18,6 +18,11 @@ namespace NCSustainability.Models
         [Required(ErrorMessage = "Please enter email address.")]
         public string Email { get; set; }
 
+        [Display(Name ="Phone Number")]
+        [RegularExpression(@"^\d{10}$", ErrorMessage = "Please enter 10 digit phone number.")]
+        [Required(ErrorMessage = "Please enter phone number.")]
+        public string Phone { get; set; }
+
         [Display(Name = "Event Categories")]
         public ICollection<EventSubscriber> EventSubscribers { get; set; }
     }

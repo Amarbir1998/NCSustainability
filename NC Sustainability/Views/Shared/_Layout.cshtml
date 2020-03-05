@@ -36,6 +36,7 @@
         <nav id="nav" class="navbar navbar-expand-sm fixed-top navbar-light bg-white">
             <div class="container-fluid">
                 <a id="logo" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img id="logo" src="~/Images/Sus-logo.png" /></a>
+
                 <hr class="new1" />
                 <div class="menu-container">
                     <input type="checkbox" class="toggler" />
@@ -59,15 +60,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link text-white" asp-area="" asp-controller="FunFacts" asp-action="Index">Fun Facts</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" href="~/Identity/Account/Register">Register</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" href="~/Identity/Account/Login">LOGIN</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" href="~/Identity/Account/Logout">LOGOUT</a>
-                                    </li>
+                                    <partial name="_LoginPartial" />
                                 </ul>
                             </div>
                         </div>
@@ -94,15 +87,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="FunFacts" asp-action="Index">Fun Facts</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="~/Identity/Account/Register">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="~/Identity/Account/Login">LOGIN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="~/Identity/Account/Logout">LOGOUT</a>
-                        </li>
+                        <partial name="_LoginPartial" />
                     </ul>
                 </div>
             </div>
