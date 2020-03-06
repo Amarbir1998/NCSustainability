@@ -73,3 +73,4 @@ C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Details.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Edit.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Index.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
