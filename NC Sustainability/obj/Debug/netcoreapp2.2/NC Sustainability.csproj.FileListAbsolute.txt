@@ -48,8 +48,6 @@ C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Details.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Edit.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Index.cshtml.g.cs
-C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Edit.cshtml.g.cs
-C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Index.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorTargetAssemblyInfo.cache
@@ -74,3 +72,5 @@ C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Edit.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Index.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Index.cshtml.g.cs
+C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Edit.cshtml.g.cs

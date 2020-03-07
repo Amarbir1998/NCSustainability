@@ -51,7 +51,7 @@
                             {
                                 condList += ", " + c[i].EventCategory.EventCategoryName;
                             }
-                            <a tabindex="0" class="" role="button" data-toggle="popover"
+                            <a tabindex="0" class="text-black-50" role="button" data-toggle="popover"
                                data-trigger="focus" title="Categories" data-placement="bottom" data-content="@condList">@firstCond...<span class="badge badge-info">@condCount</span></a>
                         }
                         else
@@ -63,7 +63,7 @@
                 @*For help with Bootstrap Popovers see: https://getbootstrap.com/docs/4.0/components/popovers/*@
             </td>
             <td>
-                @if (User.IsInRole("Admin"))
+                @if (User.IsInRole("Admin")||User.IsInRole("Subscriber"))
                 {
 
                     <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.ID">Edit</a>

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using NCSustainability.Data;
 using NCSustainability.ViewModels;
 
-namespace NcSustainability.Controllers
+namespace NCSustainability.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class UserRolesController : Controller

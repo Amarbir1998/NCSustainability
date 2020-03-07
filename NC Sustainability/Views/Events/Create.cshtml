@@ -79,62 +79,32 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script src="~/js/refreshDDL.js"></script>
     <script type="text/javascript">
-        $('#submitCreate').click(function (event) {
-            event.preventDefault();
-            var form = $('#createCategoryForm');
-            if (form.valid()) {
-                $.ajax({
-                    type: "POST",
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    success: function () {
-                        $('#addCategoryModal').modal('hide');
-                    },
-                    error: function () {
-                        alert("Create Failed.  There was a problem adding the record.");
-                    }
-                });
-            }
-            return false;
-        });
-        $('#addCategoryModal').on('hide.bs.modal', function () {
-            $('#createCategoryForm').find("input[type=text], textarea, select").val("");//to clear the data in the popup
+        //$('#submitCreate').click(function (e) {
+        //    e.preventDefault();
+        //    var form = $('#createEventCategoryForm');
+        //    if (form.valid()) {
+        //        $.ajax({
+        //            type: "POST",
+        //            url: form.attr('action'),
+        //            data: form.serialize(),
+        //            success: function () {
+        //                $('#addEventCategoryModal').modal('hide');
+        //            },
+        //            error: function () {
+        //                alert("Create Failed.  There was a problem adding the record.");
+        //            }
+        //        });
+        //    }
+        //    return false;
+        //});
+        $('#addEventCategoryModal').on('hide.bs.modal', function () {
+            $('#createEventCategoryForm').find("input[type=text], textarea, select").val("");//to clear the data in the popup
             refreshDDL('EventCategoryID', 'Events/GetEventCategories', true, 'Select an Event Category', true);
         });
         // Add the following code if you want the name of the file appear on select
         $(".custom-file-input").on("change", function () {
             var fileName = $(this).val().split("\\").pop();
             $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        });
-        // Add the following code if you want the name of the file appear on select
-        $(".custom-file-input").on("change", function () {
-            var fileName = $(this).val().split("\\").pop();
-            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        });
-    </script>
-    <script src="~/js/refreshDDL.js"></script>
-    <script type="text/javascript">
-        $('#submitCreate').click(function (event) {
-            event.preventDefault();
-            var form = $('#createEventCategoryForm');
-            if (form.valid()) {
-                $.ajax({
-                    type: "POST",
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    success: function () {
-                        $('#addEventCategoryModal').modal('hide');
-                    },
-                    error: function () {
-                        alert("Create Failed.  There was a problem adding the record.");
-                    }
-                });
-            }
-            return false;
-        });
-        $('#addEventCategoryModal').on('hide.bs.modal', function () {
-            $('#createEventCategoryForm').find("input[type=text], textarea, select").val("");//to clear the data in the popup
-            refreshDDL('EventCategoryID', 'Events/GetEventcategories', true, 'Select an Event category', true);
         });
     </script>
 }

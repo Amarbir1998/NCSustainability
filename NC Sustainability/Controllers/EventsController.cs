@@ -214,11 +214,7 @@ namespace NCSustainability.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        private SelectList CategorySelectList(int? selectedId)
-        {
-            return new SelectList(_context.FunFact
-                .OrderBy(d => d.EventCategoryName), "ID", "EventCategoryName", selectedId);
-        }
+        
         [HttpGet]
         private SelectList EventCategorySelectList(int? selectedId)
         {
