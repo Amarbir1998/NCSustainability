@@ -16,4 +16,13 @@ namespace NCSustainability.ViewModels
         [Display(Name = "Roles")]
         public IList<string> userRoles { get; set; }
     }
+
+    public class RoleVM
+    {
+        public string RoleId { get; set; }
+
+        public string RoleName { get; set; }
+
+        public bool Assigned { get; set; }
+    }
 }
