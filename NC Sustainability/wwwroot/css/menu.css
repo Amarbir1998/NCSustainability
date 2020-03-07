@@ -138,7 +138,7 @@
 
         .menu > div {
             position: absolute;
-            width: 390px;
+            width: 1600px;
             height: 1600px;
             border-radius: 50%;
             top: 50%;
@@ -208,7 +208,7 @@
     }
 
     a#click-event{
-        margin-left: 1000px;
+        margin-left: 10px;
     }
 
     .leftside {
@@ -228,7 +228,7 @@
         margin-left: 0px;
         width: 290px;
         /*margin-bottom: 50px;*/
-        height: 450px;
+        height: 400px;
         color: #ffff
     }
 
@@ -312,6 +312,7 @@
     p.para-2 {
         font-size: 35px;
         font-weight: 600;
+        margin-top: 60px;
     }
 
     h2.event {
@@ -323,11 +324,14 @@
     }
 
     img#sustain-pic {
-        width: 268px;
+        width: 269px;
     }
 
-    #carouselExampleControlss {
-        width: 200%;
+    /*#carouselExampleControlss {
+         width: 300px;
+    }*/
+    div#col-md-4 mb-5{
+        width:50%;
     }
 
     #carouselExampleControls {
@@ -388,9 +392,9 @@
         color: white;
         /*border: 1px solid #292929;*/
         transition: .5s;
-        margin-left: 135px;
-        width: 20%;
-        height:7%;
+        margin-left: 130px;
+        width: 18%;
+        height:3%;
     }
 
     li.social-media1 {
@@ -407,11 +411,19 @@
         height: 7%;
        
     }
+
+  
+
+
 }
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {
     .menu-container {
         display: block;
+    }
+
+    a#click-event {
+        margin-left: 10px;
     }
 
     img#logo {
@@ -545,8 +557,8 @@
 
         .menu > div {
             position: absolute;
-            width: 700px;
-            height: 1200px;
+            width: 1600px;
+            height: 1600px;
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -723,6 +735,7 @@
     p.para-2 {
         font-size: 35px;
         font-weight: 600;
+        margin-top: 60px;
     }
 
     h2.event {
@@ -817,6 +830,10 @@
 
     .menu-container {
         display: block;
+    }
+
+    a#click-event {
+        margin-left: 10px;
     }
 
     #news-row {
@@ -1025,7 +1042,7 @@
         color: #fff;
         margin-bottom: 50px;
         margin-left: 0px;
-        width: 395px;
+        width: 450px;
         margin-right: 40px;
         height: 450px;
     }
@@ -1034,7 +1051,7 @@
         background: #0077BE;
         margin-top: 20px;
         margin-left: 0px;
-        width: 395px;
+        width: 450px;
         /*margin-bottom: 50px;*/
         height: 450px;
         color: #ffff
@@ -1218,7 +1235,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     #nav {
-        width: 58%;
+        width: 95%;
         
     }
 
