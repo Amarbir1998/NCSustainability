@@ -32,6 +32,23 @@ namespace NCSustainability.Data
                         });
                     context.SaveChanges();
                 }
+                if (!context.Promotions.Any())
+                {
+                    context.Promotions.AddRange(
+                        new Promotion
+                        {
+                            Description = "Planting trees in Spring break",
+                            SPdate = DateTime.Parse("2020-05-01"),
+                            EPdate = DateTime.Parse("2020-09-29")
+                        },
+                        new Promotion
+                        {
+                            Description = "Using organic Fertilization in Spring break",
+                            SPdate = DateTime.Parse("2020-05-01"),
+                            EPdate = DateTime.Parse("2020-09-29")
+                        });
+                    context.SaveChanges();
+                }
                 if (!context.Events.Any())
                 {
                     context.Events.AddRange(

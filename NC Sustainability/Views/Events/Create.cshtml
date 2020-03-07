@@ -79,25 +79,29 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script src="~/js/refreshDDL.js"></script>
     <script type="text/javascript">
-        //$('#submitCreate').click(function (e) {
-        //    e.preventDefault();
-        //    var form = $('#createEventCategoryForm');
-        //    if (form.valid()) {
-        //        $.ajax({
-        //            type: "POST",
-        //            url: form.attr('action'),
-        //            data: form.serialize(),
-        //            success: function () {
-        //                $('#addEventCategoryModal').modal('hide');
-        //            },
-        //            error: function () {
-        //                alert("Create Failed.  There was a problem adding the record.");
-        //            }
-        //        });
-        //    }
-        //    return false;
-        //});
+        $('#submitCreate').click(function (e) {
+            
+            //e.preventDefault();
+            var form = $('#createEventCategoryForm');
+            if (form.valid()) {
+                $.ajax({
+                    type: "POST",
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: alert("Record Ctreated Successfully")
+                    //success: function () {
+                    //    $('#addEventCategoryModal').modal('hide');
+                        
+                    //},
+                    //error: function () {
+                    //    alert("Create Failed.  There was a problem adding the record.");
+                    //}
+                });
+            }
+            return false;
+        });
         $('#addEventCategoryModal').on('hide.bs.modal', function () {
+            //alert("OK");
             $('#createEventCategoryForm').find("input[type=text], textarea, select").val("");//to clear the data in the popup
             refreshDDL('EventCategoryID', 'Events/GetEventCategories', true, 'Select an Event Category', true);
         });
