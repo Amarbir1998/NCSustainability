@@ -3,6 +3,19 @@ for details on configuring this project to bundle and minify static web assets. 
 
 
 
+img#logo {
+    height: 80px;
+    width: 240px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+/*.menu-container .hamburger {
+    display: none;
+}*/
+
+
+
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -19,6 +32,7 @@ html {
   html {
     font-size: 16px;
   }*/
+
 
 .border-top {
     border-top: 1px solid #e5e5e5;
@@ -58,9 +72,7 @@ body {
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
 }
-#nav {
-    width: 95%;
-}
+
 #navbarNav {
     margin-left: 1100px;
     padding-bottom: 300px;
@@ -68,7 +80,7 @@ body {
 
 .navbar-nav {
     font-size: 17px;
-    margin-left: 100px;
+    margin-left: 0;
     margin-top: 0;
     color: #155E88;
 }
@@ -81,9 +93,13 @@ body {
 #navbarSupportedContent {
     background-color: #0077BE;
     color: #fff;
-    margin-left: 45px;
-    height: 70px;
+    margin-left: 115px;
+    height: 60px;
 }
+
+/*#nav {
+    width: 50%;
+}*/
 
 #btn-class:hover {
     color: #e5e5e5;
@@ -101,6 +117,12 @@ li:hover {
 
 .carousel-inner carousel-item {
     height: 100vh;
+}
+
+#carouselFull {
+    width: 100%;
+    height: 100%;
+    margin-left: 15px;
 }
 
 #carousel {
@@ -121,6 +143,10 @@ li:hover {
     background-image: none;
 }
 
+.carousel-inner {
+    height: 100%;
+}
+
 @media screen and (min-width: 768px) {
 
     .leftside, .rightside {
@@ -138,31 +164,38 @@ li:hover {
     margin-top: 20px;
     color: #fff;
     margin-bottom: 50px;
+    margin-top: 40px;
 }
 
 .rightside {
     background: #0077BE;
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 540px;
+    margin-top: 40px;
+    /*margin-left: 20px;*/
+    width: 465px;
     margin-bottom: 50px;
 }
 
+
 img.image-1 {
     height: 190px;
-    width: 555px;
+    width: 465px;
     margin-bottom: 20px;
 }
 
 img.image-2 {
     height: 190px;
-    width: 550px;
+    width: 465px;
     margin-bottom: 20px;
 }
 
-h2.fossil-heading {
+h1.fossil-heading {
     margin-left: 15px;
     color: #fff;
+}
+
+a.fossil-fuel {
+    font-size: 20px;
+    margin-left: 50px;
 }
 
 
@@ -217,6 +250,7 @@ a.fossil-fuel:hover {
 p.para-2 {
     font-size: 30px;
     font-weight: 600;
+    margin-top: 39px;
 }
 
 a.hello {
@@ -251,8 +285,9 @@ a.hello {
 
 .copy {
     margin-left: 70px;
-    margin-top: 40%;
+    margin-top: 50%;
     font-size: 25px;
+    color: #000;
 }
 
 
@@ -295,7 +330,7 @@ li.social-media {
     color: white;
     /*border: 1px solid #292929;*/
     transition: .5s;
-    margin-left: 500px;
+    margin-left: 400px;
     width: 8%;
 }
 
@@ -316,6 +351,10 @@ li.social-media1 {
     display: none;
 }
 
+.navbar .dropdown-menu {
+    background-color: #0077BE;
+}
+
 @media only screen and (min-width:1024px) and (max-width:1439px) {
     img#logo {
         height: 80px;
@@ -323,6 +362,8 @@ li.social-media1 {
         margin-left: 10px;
         margin-top: 0px;
     }
+
+
 
     a.navbar-brand {
         white-space: normal;
@@ -387,7 +428,7 @@ li.social-media1 {
     }
 
     .navbar-nav {
-        font-size: 17px;
+        font-size: 12px;
         margin-left: 0;
         margin-top: 0;
         color: #155E88;
@@ -401,12 +442,12 @@ li.social-media1 {
     #navbarSupportedContent {
         background-color: #0077BE;
         color: #fff;
-        margin-left: 45px;
+        margin-left: 115px;
         height: 60px;
     }
 
-    #nav {
-        width: 190%;
+    nav#nav {
+        width: 100%;
     }
 
     #btn-class:hover {
@@ -426,13 +467,11 @@ li.social-media1 {
     .carousel-inner carousel-item {
         height: 100vh;
     }
-    .carousel-item .img-fluid {
+
+    #carouselFull {
         width: 100%;
         height: 100%;
-    }
-    #carouselFull {
-        width: 102%;
-        height: 100%;
+        margin-left: 15px;
     }
 
     #carousel {
@@ -452,12 +491,13 @@ li.social-media1 {
     .carousel-control-next {
         background-image: none;
     }
-    .h-auto {height:100%;}
+
     .carousel-inner {
         height: 100%;
     }
 
     @media screen and (min-width: 768px) {
+
         .leftside, .rightside {
             height: 100vh;
         }
@@ -474,15 +514,17 @@ li.social-media1 {
         color: #fff;
         margin-bottom: 50px;
         margin-top: 40px;
+
     }
 
     .rightside {
         background: #0077BE;
         margin-top: 40px;
-        /*margin-left: 20px;*/
+        margin-left: 20px;
         width: 465px;
         margin-bottom: 50px;
     }
+
 
     img.image-1 {
         height: 190px;
@@ -530,11 +572,11 @@ li.social-media1 {
     }
 
     a:link, a:hover, a:active, a:visited {
-        color: #0077BE;
+        color: white;
     }
 
     a.fossil-fuel:hover {
-        color: #155E88;
+        color: #fff;
     }
 
     .carousel-control-prev #previous {
@@ -558,6 +600,7 @@ li.social-media1 {
     p.para-2 {
         font-size: 30px;
         font-weight: 600;
+        margin-top: 39px;
     }
 
     a.hello {
@@ -592,7 +635,7 @@ li.social-media1 {
 
     .copy {
         margin-left: 70px;
-        margin-top: 60%;
+        margin-top: 50%;
         font-size: 25px;
         color: #000;
     }
@@ -656,6 +699,10 @@ li.social-media1 {
 
     .menu-container {
         display: none;
+    }
+
+    .navbar .dropdown-menu {
+        background-color: #0077BE;
     }
 }
 
@@ -762,7 +809,7 @@ li.social-media1 {
         height: 60px;
     }
 
-    #nav {
+    nav#nav {
         width: 92%;
     }
 
@@ -1013,5 +1060,9 @@ li.social-media1 {
 
     .menu-container {
         display: none;
+    }
+
+    .navbar .dropdown-menu {
+        background-color: #0077BE;
     }
 }
