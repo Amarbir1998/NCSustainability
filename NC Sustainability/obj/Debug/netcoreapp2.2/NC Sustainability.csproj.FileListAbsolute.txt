@@ -74,3 +74,79 @@ C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Index.cshtml.g.cs
 C:\Users\Administrator\source\repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\NCSustainability.deps.json
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\NCSustainability.runtimeconfig.json
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\NCSustainability.runtimeconfig.dev.json
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\NCSustainability.dll
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\NCSustainability.pdb
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\NCSustainability.Views.dll
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\bin\Debug\netcoreapp2.2\NCSustainability.Views.pdb
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csprojAssemblyReference.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NCSustainability.Resources.Constants.EmailInfo.resources
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.GenerateResource.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorAssemblyInfo.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfoInputs.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.AssemblyInfo.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NCSustainability.TagHelpers.input.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NCSustainability.TagHelpers.output.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorCoreGenerate.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Create.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Delete.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\EventCategories\IndexS.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Events\Create.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Events\Delete.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Events\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Events\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Events\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\FunFacts\Create.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\FunFacts\Delete.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\FunFacts\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\FunFacts\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\FunFacts\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Fun.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Home\Subscribe.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Create.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Delete.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Create.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_EventCategoryCreate.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Create.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Delete.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Subscribers\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\UserRoles\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorTargetAssemblyInfo.cache
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.RazorTargetAssemblyInfo.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NCSustainability.Views.pdb
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NCSustainability.dll
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NCSustainability.pdb
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\NC Sustainability.csproj.CopyComplete

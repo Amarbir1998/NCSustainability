@@ -24,9 +24,10 @@ namespace NCSustainability.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var NCContext = _context.Promotions;
-            var nCDbContext = _context.Events.Include(ec => ec.EventCategory);
-            return View(await nCDbContext.ToListAsync());
+            //var NCContext = _context.Promotions;
+            // var nCDbContext = _context.Events.Include(ec => ec.EventCategory);
+            //return View(await nCDbContext.ToListAsync());
+            return View();
         }
 
         public IActionResult Privacy()

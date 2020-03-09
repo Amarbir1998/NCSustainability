@@ -15,9 +15,9 @@ namespace NCSustainability.Data
             using (var context = new NCDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<NCDbContext>>()))
             {
-                if (!context.FunFact.Any())
+                if (!context.EventCategories.Any())
                 {
-                    context.FunFact.AddRange(
+                    context.EventCategories.AddRange(
                         new EventCategory
                         {
                             EventCategoryName = "Academic"
