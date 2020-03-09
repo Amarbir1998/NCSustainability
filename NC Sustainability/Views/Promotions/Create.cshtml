@@ -4,6 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
+<h1>Create</h1>
 
 <h4>Promotion</h4>
 <hr />
@@ -32,49 +33,21 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-primary">Cancel</a>
+                <a asp-action="Index" class="btn btn-primary">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script src="~/js/refreshDDL.js"></script>
+
     <script type="text/javascript">
-        $('#submitCreate').click(function (event) {
-            event.preventDefault();
-            var form = $('#createCategoryForm');
-            if (form.valid()) {
-                $.ajax({
-                    type: "POST",
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    success: function () {
-                        $('#addCategoryModal').modal('hide');
-                    },
-                    error: function () {
-                        alert("Create Failed.  There was a problem adding the record.");
-                    }
-                });
-            }
-            return false;
-        });
-        $('#addCategoryModal').on('hide.bs.modal', function () {
-            $('#createCategoryForm').find("input[type=text], textarea, select").val("");//to clear the data in the popup
-            refreshDDL('EventCategoryID', 'Events/GetEventCategories', true, 'Select an Event Category', true);
-        });
+
         // Add the following code if you want the name of the file appear on select
         $(".custom-file-input").on("change", function () {
             var fileName = $(this).val().split("\\").pop();
             $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
         });
-    // Add the following code if you want the name of the file appear on select
-            $(".custom-file-input").on("change", function() {
-              var fileName = $(this).val().split("\\").pop();
-              $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-            });
     </script>
 }

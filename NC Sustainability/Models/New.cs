@@ -9,8 +9,9 @@ namespace NCSustainability.Models
     public class New
     {
         public int ID { get; set; }
+
         [ScaffoldColumn(false)]
-        public byte[] image { get; set; }
+        public byte[] imageContent { get; set; }
 
         [StringLength(256)]
         [ScaffoldColumn(false)]
@@ -21,13 +22,18 @@ namespace NCSustainability.Models
         [ScaffoldColumn(false)]
         public string imageFileName { get; set; }
 
-        [Display(Name = "Name")]
-        [Required(ErrorMessage = "Please enter your name.")]
+        [Display(Name = "Title")]
+        [Required(ErrorMessage = "Please enter title.")]
+        public string Title { get; set; }
+
+        [Display(Name = "Description")]
+        [Required(ErrorMessage = "Please enter description.")]
         public string Description { get; set; }
 
         [Display(Name = "Posted Date")]
         [Required(ErrorMessage = "Posted Date is required.")]
         [DisplayFormat(DataFormatString = "{0:MMMM dd, yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime Pdate { get; set; }
     }
 }

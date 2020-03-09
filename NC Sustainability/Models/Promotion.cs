@@ -31,11 +31,13 @@ namespace NCSustainability.Models
         [Display(Name = "Start Date")]
         [Required(ErrorMessage = "Start Date is required.")]
         [DisplayFormat(DataFormatString = "{0:MMMM dd, yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime SPdate { get; set; }
 
         [Display(Name = "End Date")]
         [Required(ErrorMessage = "End Date is required.")]
         [DisplayFormat(DataFormatString = "{0:MMMM dd, yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime EPdate { get; set; }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -54,10 +56,28 @@ namespace NCSustainability.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Description,Pdate")] New @new)
+        public async Task<IActionResult> Create([Bind("ID,Title,Description,Pdate")] New @new, IFormFile thePicture)
         {
             if (ModelState.IsValid)
             {
+                if (thePicture != null)
+                {
+                    string mimeType = thePicture.ContentType;
+                    long fileLength = thePicture.Length;
+                    if (!(mimeType == "" || fileLength == 0))//Looks like we have a file!!!
+                    {
+                        if (mimeType.Contains("image"))
+                        {
+                            using (var memoryStream = new MemoryStream())
+                            {
+                                await thePicture.CopyToAsync(memoryStream);
+                                @new.imageContent = memoryStream.ToArray();
+                            }
+                            @new.imageMimeType = mimeType;
+                            @new.imageFileName = thePicture.FileName;
+                        }
+                    }
+                }
                 _context.Add(@new);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -86,7 +106,7 @@ namespace NCSustainability.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Description,Pdate")] New @new)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Description,Pdate")] New @new, string chkRemoveImage, IFormFile thePicture)
         {
             if (id != @new.ID)
             {
@@ -97,6 +117,34 @@ namespace NCSustainability.Controllers
             {
                 try
                 {
+                    //For the image
+                    if (chkRemoveImage != null)
+                    {
+                        @new.imageContent = null;
+                        @new.imageMimeType = null;
+                        @new.imageFileName = null;
+                    }
+                    else
+                    {
+                        if (thePicture != null)
+                        {
+                            string mimeType = thePicture.ContentType;
+                            long fileLength = thePicture.Length;
+                            if (!(mimeType == "" || fileLength == 0))//Looks like we have a file!!!
+                            {
+                                if (mimeType.Contains("image"))
+                                {
+                                    using (var memoryStream = new MemoryStream())
+                                    {
+                                        await thePicture.CopyToAsync(memoryStream);
+                                        @new.imageContent = memoryStream.ToArray();
+                                    }
+                                    @new.imageMimeType = mimeType;
+                                    @new.imageFileName = thePicture.FileName;
+                                }
+                            }
+                        }
+                    }
                     _context.Update(@new);
                     await _context.SaveChangesAsync();
                 }

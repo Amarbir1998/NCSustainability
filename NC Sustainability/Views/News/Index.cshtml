@@ -4,14 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>News</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New News</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th></th>
+            <th>
+
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
@@ -25,15 +30,28 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @{
+                    if (item.imageContent != null && item.imageMimeType.Contains("image"))
+                    {
+                        string imageBase64 = Convert.ToBase64String(item.imageContent);
+                        string imageSrc = string.Format("data:" + item.imageMimeType + ";base64,{0}", imageBase64);
+                        <img src="@imageSrc" alt="Profile Picture of @item.Description" title="Profile Picture of @item.Description" style="max-height: 100px; max-width: 120px" class="img-fluid rounded" />
+                    }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Pdate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-primary">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-primary">Delete</a>
             </td>
         </tr>
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NCSustainability.Data;
 
 namespace NCSustainability.Data.NCMigrations
 {
     [DbContext(typeof(NCDbContext))]
-    partial class NCDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200309183549_ImageNews")]
+    partial class ImageNews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,9 +141,6 @@ namespace NCSustainability.Data.NCMigrations
                         .IsRequired();
 
                     b.Property<DateTime>("Pdate");
-
-                    b.Property<string>("Title")
-                        .IsRequired();
 
                     b.Property<byte[]>("imageContent");
 

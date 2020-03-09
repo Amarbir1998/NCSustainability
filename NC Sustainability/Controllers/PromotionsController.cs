@@ -1,17 +1,18 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using NCSustainability.Data;
-using NCSustainability.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using NCSustainability.Data;
+using NCSustainability.Models;
 
 namespace NCSustainability.Controllers
 {
-    public class PromotionsController:Controller
+    public class PromotionsController : Controller
     {
         private readonly NCDbContext _context;
 
@@ -20,13 +21,13 @@ namespace NCSustainability.Controllers
             _context = context;
         }
 
-        // GET: EventCategories
+        // GET: Promotions
         public async Task<IActionResult> Index()
         {
             return View(await _context.Promotions.ToListAsync());
         }
 
-        // GET: FunFacts/Details/5
+        // GET: Promotions/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,30 +35,28 @@ namespace NCSustainability.Controllers
                 return NotFound();
             }
 
-            var promotions = await _context.Promotions
+            var promotion = await _context.Promotions
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (promotions == null)
+            if (promotion == null)
             {
                 return NotFound();
             }
 
-            return View(promotions);
+            return View(promotion);
         }
 
-
-
-        // GET: FunFacts/Create
+        // GET: Promotions/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: EventCategories/Create
+        // POST: Promotions/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Description,SPdate,EPdate")] Promotion promotions, IFormFile thePicture)
+        public async Task<IActionResult> Create([Bind("ID,Description,SPdate,EPdate")] Promotion promotion, IFormFile thePicture)
         {
             if (ModelState.IsValid)
             {
@@ -72,21 +71,21 @@ namespace NCSustainability.Controllers
                             using (var memoryStream = new MemoryStream())
                             {
                                 await thePicture.CopyToAsync(memoryStream);
-                                promotions.imageContent = memoryStream.ToArray();
+                                promotion.imageContent = memoryStream.ToArray();
                             }
-                            promotions.imageMimeType = mimeType;
-                            promotions.imageFileName = thePicture.FileName;
+                            promotion.imageMimeType = mimeType;
+                            promotion.imageFileName = thePicture.FileName;
                         }
                     }
                 }
-                _context.Add(promotions);
+                _context.Add(promotion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(promotions);
+            return View(promotion);
         }
 
-        // GET: FunFact/Edit/5
+        // GET: Promotions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -94,20 +93,20 @@ namespace NCSustainability.Controllers
                 return NotFound();
             }
 
-            var promotions = await _context.Promotions.FindAsync(id);
-            if (promotions == null)
+            var promotion = await _context.Promotions.FindAsync(id);
+            if (promotion == null)
             {
                 return NotFound();
             }
-            return View(promotions);
+            return View(promotion);
         }
 
-        // POST: FunFacts/Edit/5
+        // POST: Promotions/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Description,SPdate,EPdate")] Promotion promotion)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Description,SPdate,EPdate")] Promotion promotion, string chkRemoveImage, IFormFile thePicture)
         {
             if (id != promotion.ID)
             {
@@ -118,12 +117,40 @@ namespace NCSustainability.Controllers
             {
                 try
                 {
+                    //For the image
+                    if (chkRemoveImage != null)
+                    {
+                        promotion.imageContent = null;
+                        promotion.imageMimeType = null;
+                        promotion.imageFileName = null;
+                    }
+                    else
+                    {
+                        if (thePicture != null)
+                        {
+                            string mimeType = thePicture.ContentType;
+                            long fileLength = thePicture.Length;
+                            if (!(mimeType == "" || fileLength == 0))//Looks like we have a file!!!
+                            {
+                                if (mimeType.Contains("image"))
+                                {
+                                    using (var memoryStream = new MemoryStream())
+                                    {
+                                        await thePicture.CopyToAsync(memoryStream);
+                                        promotion.imageContent = memoryStream.ToArray();
+                                    }
+                                    promotion.imageMimeType = mimeType;
+                                    promotion.imageFileName = thePicture.FileName;
+                                }
+                            }
+                        }
+                    }
                     _context.Update(promotion);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!promotionExists(promotion.ID))
+                    if (!PromotionExists(promotion.ID))
                     {
                         return NotFound();
                     }
@@ -137,38 +164,38 @@ namespace NCSustainability.Controllers
             return View(promotion);
         }
 
-        //// GET: FunFact/Delete/5
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var promotion = await _context.Promotion
-        //        .FirstOrDefaultAsync(m => m.ID == id);
-        //    if (promotion == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(promotion);
-        //}
-
-        //// POST: FunFact/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    var promotion = await _context.Promotion.FindAsync(id);
-        //    _context.FunFact.Remove(promotion);
-        //    await _context.SaveChangesAsync();
-        //    return RedirectToAction(nameof(Index));
-        //}
-
-        private bool promotionExists(int id)
+        // GET: Promotions/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
-            return _context.FunFact.Any(e => e.ID == id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var promotion = await _context.Promotions
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (promotion == null)
+            {
+                return NotFound();
+            }
+
+            return View(promotion);
+        }
+
+        // POST: Promotions/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var promotion = await _context.Promotions.FindAsync(id);
+            _context.Promotions.Remove(promotion);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool PromotionExists(int id)
+        {
+            return _context.Promotions.Any(e => e.ID == id);
         }
     }
 }

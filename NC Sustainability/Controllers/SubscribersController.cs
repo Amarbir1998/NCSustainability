@@ -12,7 +12,7 @@ using NCSustainability.ViewModels;
 
 namespace NC_Sustainability.Controllers
 {
-    [Authorize(Roles ="Admin,Subscriber")]
+    [Authorize]
     public class SubscribersController : Controller
     {
         private readonly NCDbContext _context;

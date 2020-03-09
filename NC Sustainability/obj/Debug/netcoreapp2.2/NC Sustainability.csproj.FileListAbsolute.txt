@@ -133,8 +133,6 @@ C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Details.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Edit.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\LikedFunfacts\Index.cshtml.g.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Create.cshtml.g.cs
-C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Index.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_EventCategoryCreate.cshtml.g.cs
@@ -155,3 +153,8 @@ C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Details.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Edit.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Index.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Create.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Delete.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Details.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Edit.cshtml.g.cs
+C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Index.cshtml.g.cs
