@@ -57,16 +57,16 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Edate)
                 </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.EventDescription)
-                </td>*@
                 <td>
+                    @Html.DisplayFor(modelItem => item.EventDescription)
+                </td>
+                @*<td>
                     @{
                         int specCount = item.EventDescription.Length;
                         if (specCount > 0)
                         {
-                                string firstSpec = item.EventDescription.Substring(0,30);
-                            if (specCount > 30)
+                                string firstSpec = item.EventDescription.Substring(0,25);
+                            if (specCount > 25)
                             {
                                 string specList = item.EventDescription;
                                     
@@ -80,8 +80,7 @@
                             }
                         }
                     }
-                    @*For help with Bootstrap Collapse see: https://getbootstrap.com/docs/4.0/components/collapse/*@
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.EventCategory.EventCategoryName)
                 </td>

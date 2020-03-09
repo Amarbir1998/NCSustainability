@@ -51,7 +51,16 @@
                                         <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">HOME </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Promotions" asp-action="Index">Promotions </a>
+                                        <a class="nav-link text-white" asp-area="" asp-controller="Events" asp-action="Index">EVENTS </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" asp-area="" asp-controller="Promotions" asp-action="Index">PROMOTIONS </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" asp-area="" asp-controller="News" asp-action="Index">NEWS </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" asp-area="" asp-controller="FunFacts" asp-action="Index">STUDENT BLOGS </a>
                                     </li>
 
                                     @if (User.IsInRole("Admin"))
@@ -61,17 +70,14 @@
                                                 Office Menu<b class="caret"></b>
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item text-black" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item text-black" asp-area="" asp-controller="Subscribers" asp-action="Index">Subscribers</a>
                                                 <a class="dropdown-item text-black" asp-area="" asp-controller="FunFacts" asp-action="Index">Student Blogs</a>
-                                                <a class="dropdown-item text-black" asp-area="" asp-controller="News" asp-action="Index">News</a>
+                                                <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item text-black" asp-area="" asp-controller="UserRoles" asp-action="Index">Security</a>
                                             </div>
 
                                         </li>
                                     }
-                                    <partial  name="_LoginPartial" />
+                                    <partial name="_LoginPartial" />
                                 </ul>
                             </div>
                         </div>
@@ -86,10 +92,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home </a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">HOME </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Promotions" asp-action="Index">Promotions </a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Events" asp-action="Index">EVENTS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Promotions" asp-action="Index">PROMOTIONS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="News" asp-action="Index">NEWS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="FunFacts" asp-action="Index">STUDENT BLOGS </a>
                         </li>
                         @if (User.IsInRole("Admin"))
                         {
@@ -98,11 +113,8 @@
                                     Office Menu<b class="caret"></b>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item text-black" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
-                                    <div class="dropdown-divider"></div>
                                     <a class="dropdown-item text-black" asp-area="" asp-controller="Subscribers" asp-action="Index">Subscribers</a>
-                                    <a class="dropdown-item text-black" asp-area="" asp-controller="FunFacts" asp-action="Index">Student Blogs</a>
-                                    <a class="dropdown-item text-black" asp-area="" asp-controller="News" asp-action="Index">News</a>
+                                    <div class="dropdown-divider"></div>
                                     <a class="dropdown-item text-black" asp-area="" asp-controller="UserRoles" asp-action="Index">Security</a>
                                 </div>
 

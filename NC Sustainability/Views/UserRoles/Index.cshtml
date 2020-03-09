@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Index";
 }
+<link rel="stylesheet" href="~/css/site.css" />
 
 <h2>User Role Assignments</h2>
 
@@ -30,7 +31,7 @@
                     }
                 }
             </td>
-            <td>
+            <td class="color-text">
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id })
             </td>
         </tr>

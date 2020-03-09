@@ -48,25 +48,27 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                    @{
-                        int specCount = item.FunFactDescription.Length;
-                        if (specCount > 0)
-                        {
-                            string firstSpec = item.FunFactDescription.Substring(0, 30);
-                            if (specCount > 30)
-                            {
-                                string specList = item.FunFactDescription;
+
+                    @Html.DisplayFor(modelItem => item.FunFactDescription)
+                    @*@{
+            int specCount = item.FunFactDescription.Length;
+            if (specCount > 0)
+            {
+                string firstSpec = item.FunFactDescription.Substring(0, 30);
+                if (specCount > 30)
+                {
+                    string specList = item.FunFactDescription;
 
 
-                                <a tabindex="0" class="text-body" role="button" data-toggle="popover"
-                                   data-trigger="focus" title="@item.FunFactDescription" data-placement="bottom" data-content="@specList">@firstSpec ... <span class="badge badge-info">See more</span></a>
-                            }
-                            else
-                            {
-                                @firstSpec
-                            }
-                        }
-                    }
+                    <a tabindex="0" class="text-body" role="button" data-toggle="popover"
+                       data-trigger="focus" title="@item.FunFactDescription" data-placement="bottom" data-content="@specList">@firstSpec ... <span class="badge badge-info">See more</span></a>
+                }
+                else
+                {
+                    @firstSpec
+                }
+            }
+        }*@
                 </td>
                 <td>
                     @if (User.IsInRole("Admin"))

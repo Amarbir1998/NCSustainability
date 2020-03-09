@@ -1,6 +1,9 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
+td.color-text{
+    background-color: dodgerblue;
+    width: 50px;
+}
 
 
 img#logo {
@@ -551,11 +554,11 @@ li.social-media1 {
 
 
     a:link, a:hover, a:active, a:visited {
-        color: white;
+        color: #0077BE;
     }
 
     a.fossil:hover {
-        color: #fff;
+        color: #3B5998;
     }
 
     p.para-1 {
@@ -913,11 +916,11 @@ li.social-media1 {
 
 
     a:link, a:hover, a:active, a:visited {
-        color: white;
+        color: #0077BE;
     }
 
     a.fossil:hover {
-        color: #fff;
+        color: #3B5998;
     }
 
     p.para-1 {

@@ -56,7 +56,7 @@ namespace NCSustainability.Data
                         {
                             Title = "Planting Trees Event",
                             Edate = DateTime.Parse("2020-02-21"),
-                            EventDescription = "Join NC for this hands-on workshop taught by Stefan Weber, an experienced grower and educator. Discover the great diversity and beauty of southern Ontario’s flora and their important role in native plant protection. Learn how to identify, collect, store and propagate the seeds of select native herbaceous (soft-stemmed) plants, and tour the TBG’s new native seedbeds and plantings. Lists of easy-to-grow species for home gardens and ravine restoration will be provided.",
+                            EventDescription = "Join NC for this hands-on workshop taught by Stefan Weber, an experienced grower and educator.",
                             EventCategoryID = context.FunFact.FirstOrDefault(cd => cd.EventCategoryName == "Academic").ID
 
                         },
@@ -72,9 +72,7 @@ namespace NCSustainability.Data
                             Title = "Protect The Nature",
                             Edate = DateTime.Parse("2020-04-13"),
                             EventDescription = "What are organic-based fertilizers?" +
-"The broad category of organic - based fertilizers includes diverse formulations of products that provide plants with nutrients and / or improve organic matter in the soil.They are applied to plants and / or soils to improve soil fertility," +
-                            "plant vigour,"
-                            + "produce quality and yield.Organic - based fertilizers are used in both organic and conventional agriculture.",
+"The broad category of organic - based fertilizers includes diverse formulations of products that provide plants with nutrients and / or improve organic matter in the soil.They are applied to plants and / or soils to improve soil fertility," ,
                             EventCategoryID = context.FunFact.FirstOrDefault(cd => cd.EventCategoryName == "Food").ID
                         },
                         new Event
