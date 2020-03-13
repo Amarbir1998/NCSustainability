@@ -40,8 +40,8 @@
 
 
     #carouselFull {
-        width: 96%;
-        /*height: 800%;*/
+        width: auto;
+        /*height: 00%;*/
        
     }
 
@@ -218,7 +218,10 @@
     }
 
     a#click-event{
-        margin-left: 10px;
+        margin-left: 2px;
+        margin-bottom: 30px;
+        margin-top:0;
+
     }
 
     .leftside {
@@ -229,7 +232,7 @@
         margin-left: 0px;
         width: 290px;
         margin-right: 40px;
-        height: 450px;
+        height: 550px;
     }
 
     .rightside {
@@ -238,7 +241,7 @@
         margin-left: 0px;
         width: 290px;
         /*margin-bottom: 50px;*/
-        height: 400px;
+        height: 630px;
         color: #ffff
     }
 
@@ -281,7 +284,8 @@
 
     a.fossil {
         margin-left: 10px;
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 600;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -292,9 +296,17 @@
         color: #fff;
     }
 
-    .fossil-fuel {
+    a.fossil-fuel {
         margin-left: 10px;
-        font-size: 20px;
+        font-size: 11px;
+    }
+
+    .js-code{
+        margin-left: 75px;
+    }
+
+    span.likebtn-wrapper{
+        margin-left: 11px;
     }
 
     .carousel-control-prev #previous {
