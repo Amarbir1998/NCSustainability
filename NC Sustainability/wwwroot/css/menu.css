@@ -1,5 +1,5 @@
 ﻿#nav {
-    width: 95%;
+    width: auto;
 }
 
 
@@ -232,7 +232,7 @@
         margin-left: 0px;
         width: 290px;
         margin-right: 40px;
-        height: 550px;
+        height: 530px;
     }
 
     .rightside {
@@ -248,13 +248,13 @@
     img.image-1 {
         height: 240px;
         width: 100%;
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
     }
 
     img.image-2 {
         height: 240px;
         width: 100%;
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
     }
 
     h1.fossil-heading {
@@ -284,8 +284,8 @@
 
     a.fossil {
         margin-left: 10px;
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 15px;
+        font-weight: 700;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -472,7 +472,7 @@
 
 
     #carouselFull {
-        width: 96%;
+        width: 94%;
        
     }
 
@@ -660,7 +660,7 @@
         margin-left: 0px;
         width: 345px;
         margin-right: 40px;
-        height: 450px;
+        height: 600px;
     }
 
     .rightside {
@@ -669,7 +669,7 @@
         margin-left: 0px;
         width: 345px;
         /*margin-bottom: 50px;*/
-        height: 450px;
+        height: 630px;
         color: #ffff
     }
 
@@ -680,13 +680,13 @@
     img.image-1 {
         height: 240px;
         width: 100%;
-        margin-bottom: 20px;
+        /*margin-bottom: 5px;*/
     }
 
     img.image-2 {
         height: 240px;
         width: 100%;
-        margin-bottom: 20px;
+        /*margin-bottom: 5px;*/
     }
 
     h1.fossil-heading {
@@ -716,7 +716,8 @@
 
     a.fossil {
         margin-left: 10px;
-        font-size: 20px;
+        font-size: 17px;
+        font-weight: 700;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -1094,13 +1095,13 @@
     img.image-1 {
         height: 240px;
         width: 100%;
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
     }
 
     img.image-2 {
         height: 240px;
         width: 100%;
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
     }
 
     h1.fossil-heading {
@@ -1456,13 +1457,13 @@
     img.image-1 {
         height: 190px;
         width: 330px;
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
     }
 
     img.image-2 {
         height: 190px;
         width: 340px;
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
     }
 
     h1.fossil-heading {

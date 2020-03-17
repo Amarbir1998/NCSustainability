@@ -158,3 +158,11 @@ C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Details.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Edit.cshtml.g.cs
 C:\Users\Administrator\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Create.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Delete.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Edit.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\News\Index.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Delete.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Details.cshtml.g.cs
+C:\Users\singh\Source\Repos\NCSustainability\NC Sustainability\obj\Debug\netcoreapp2.2\Razor\Views\Promotions\Edit.cshtml.g.cs
