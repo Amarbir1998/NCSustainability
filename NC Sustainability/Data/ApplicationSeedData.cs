@@ -25,12 +25,12 @@ namespace NCSustainability.Data
             }
             //Create Users
             var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            if (userManager.FindByEmailAsync("admin1@outlook.com").Result == null)
+            if (userManager.FindByEmailAsync("admin1@ncstudents.niagaracollege.ca").Result == null)
             {
                 IdentityUser user = new IdentityUser
                 {
-                    UserName = "admin1@outlook.com",
-                    Email = "admin1@outlook.com"
+                    UserName = "admin1@ncstudents.niagaracollege.ca",
+                    Email = "admin1@ncstudents.niagaracollege.ca"
                 };
 
                 IdentityResult result = userManager.CreateAsync(user, "password").Result;
@@ -41,12 +41,12 @@ namespace NCSustainability.Data
                 }
             }
             //Create Users
-            if (userManager.FindByEmailAsync("subscriber1@outlook.com").Result == null)
+            if (userManager.FindByEmailAsync("subscriber1@ncstudents.niagaracollege.ca").Result == null)
             {
                 IdentityUser user = new IdentityUser
                 {
-                    UserName = "subscriber1@outlook.com",
-                    Email = "subscriber1@outlook.com"
+                    UserName = "subscriber1@ncstudents.niagaracollege.ca",
+                    Email = "subscriber1@ncstudents.niagaracollege.ca"
                 };
 
                 IdentityResult result = userManager.CreateAsync(user, "password").Result;
@@ -56,12 +56,12 @@ namespace NCSustainability.Data
                     userManager.AddToRoleAsync(user, "Subscriber").Wait();
                 }
             }
-            if (userManager.FindByEmailAsync("user1@outlook.com").Result == null)
+            if (userManager.FindByEmailAsync("user1@ncstudents.niagaracollege.ca").Result == null)
             {
                 IdentityUser user = new IdentityUser
                 {
-                    UserName = "user1@outlook.com",
-                    Email = "user1@outlook.com"
+                    UserName = "user1@ncstudents.niagaracollege.ca",
+                    Email = "user1@ncstudents.niagaracollege.ca"
                 };
 
                 IdentityResult result = userManager.CreateAsync(user, "password").Result;

@@ -3,7 +3,8 @@
 }
 
 
-@media only screen and (max-width:374px) {
+@media only screen and (min-width: 122px) and (max-width: 374px)
+/*@media only screen and (max-width:374px)*/ {
     .menu-container {
         display: block;
     }
@@ -40,7 +41,7 @@
 
 
     #carouselFull {
-        width: auto;
+        /*width: 100%;*/
         /*height: 00%;*/
        
     }
@@ -191,7 +192,7 @@
                         }
 
     .carousel-inner carousel-item {
-        height: 100vh;
+        /*height: 100vh;*/
     }
 
     #carousel {
@@ -337,6 +338,11 @@
         margin-top: 60px;
     }
 
+    #nav {
+        width: auto;
+    }
+
+
     h2.event {
         font-size: 35px;
     }
@@ -448,6 +454,15 @@
         background-color: #0077BE;
     }
 
+    #nav {
+        width: auto;
+    }
+
+
+    .js-code {
+        margin-left: 75px;
+    }
+
     a#click-event {
         margin-left: 10px;
     }
@@ -467,6 +482,10 @@
     .carousel-item .img-fluid {
         width: 100%;
         max-height: 2100%;
+    }
+
+    span.likebtn-wrapper {
+        margin-left: 11px;
     }
 
 
@@ -626,7 +645,7 @@
                         }
 
     .carousel-inner carousel-item {
-        height: 100vh;
+        /*height: 100vh;*/
     }
 
     #carousel {
@@ -660,7 +679,7 @@
         margin-left: 0px;
         width: 345px;
         margin-right: 40px;
-        height: 600px;
+        height: 560px;
     }
 
     .rightside {
@@ -669,7 +688,7 @@
         margin-left: 0px;
         width: 345px;
         /*margin-bottom: 50px;*/
-        height: 630px;
+        height: 620px;
         color: #ffff
     }
 
@@ -716,8 +735,8 @@
 
     a.fossil {
         margin-left: 10px;
-        font-size: 17px;
-        font-weight: 700;
+        font-size: 16px;
+        font-weight: 800;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -732,9 +751,10 @@
         margin-left: 60px;
     }
 
-    .fossil-fuel {
-        margin-left: 15px;
-        font-size: 20px;
+    a.fossil-fuel {
+        margin-left: 10px;
+        font-size: 13px;
+        font-weight: 800;
     }
 
     .carousel-control-prev #previous {
@@ -762,11 +782,12 @@
     p.para-2 {
         font-size: 35px;
         font-weight: 600;
-        margin-top: 60px;
+        margin-top: 10px;
     }
 
     h2.event {
         font-size: 35px;
+        margin-top: 25px;
         
     }
 
@@ -855,7 +876,7 @@
 @media only screen and (min-width: 425px) and (max-width: 767px) {
     
     #nav {
-        width: 95%;
+        width: auto;
     }
 
     .navbar .dropdown-menu {
@@ -1045,7 +1066,7 @@
                         }
 
     .carousel-inner carousel-item {
-        height: 100vh;
+        /*height: 100vh;*/
     }
 
     #carousel {
@@ -1079,7 +1100,7 @@
         margin-left: 0px;
         width: 392px;
         margin-right: 40px;
-        height: 450px;
+        height: 540px;
     }
 
     .rightside {
@@ -1088,8 +1109,12 @@
         margin-left: 0px;
         width: 392px;
         /*margin-bottom: 50px;*/
-        height: 450px;
+        height: 600px;
         color: #ffff
+    }
+
+    span.likebtn-wrapper {
+        margin-left: 11px;
     }
 
     img.image-1 {
@@ -1131,7 +1156,8 @@
 
     a.fossil {
         margin-left: 10px;
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 800;
     }
 
     a:link, a:hover, a:active, a:visited {
@@ -1146,9 +1172,10 @@
         margin-left: 60px;
     }
 
-    .fossil-fuel {
+    a.fossil-fuel {
         margin-left: 15px;
-        font-size: 20px;
+        font-size: 14px;
+        font-weight: 800;
     }
 
     img#sustain-pic {
@@ -1184,6 +1211,7 @@
 
     h2.event {
         font-size: 35px;
+        margin-top: 25px;
     }
 
     #carouselExampleControlss {
@@ -1236,6 +1264,8 @@
         transition: .5s;
     }
 
+   
+
 
 
     li.social-media {
@@ -1270,8 +1300,8 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     img#logo {
-        height: 80px;
-        width: 240px;
+        height: 50px;
+        width: 100px;
         margin-left: 10px;
         margin-top: 0px;
     }
@@ -1323,6 +1353,11 @@
         min-height: 100%;
     }
 
+    h2.event {
+        
+        margin-top: 25px;
+    }
+
     body {
         /* Margin bottom by footer height */
         margin-bottom: 60px;
@@ -1344,26 +1379,28 @@
     }
 
     .navbar-nav {
-        font-size: 11px;
+        font-size: 10px;
         margin-left: 0;
         margin-top: 0;
         color: #155E88;
     }
 
         .navbar-nav > li {
-            margin-left: 2px;
+            margin-left: 0px;
             margin-right: 5px;
         }
 
     #navbarSupportedContent {
         background-color: #0077BE;
         color: #fff;
-        margin-left: 45px;
+        margin-left: 10px;
         height: 60px;
+        width: auto;
+
     }
 
     #nav {
-        width: 99%;
+        width: auto;
     }
 
     #btn-class:hover {
@@ -1385,7 +1422,7 @@
     }
 
     .carousel-inner carousel-item {
-        height: 100vh;
+        /*height: 100vh;*/
     }
 
     .carousel-item .img-fluid {
@@ -1394,8 +1431,9 @@
     }
 
     #carouselFull {
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 50%;
+        margin-left: 85px;
     }
 
     #carousel {
@@ -1442,16 +1480,20 @@
         width: 330px;
         margin-bottom: 50px;
         margin-top: 40px;
-        height: 390px;
+        height: 520px;
     }
 
     .rightside {
         background: #0077BE;
         margin-top: 40px;
         /*margin-left: 20px;*/
-        width: 330px;
-        margin-bottom: 50px;
-        height:390px;
+        width: 340px;
+        /*margin-bottom: 50px;*/
+        height:520px;
+    }
+
+    span.likebtn-wrapper {
+        margin-left: 20px;
     }
 
     img.image-1 {
@@ -1472,8 +1514,9 @@
     }
 
     a.fossil-fuel {
-        font-size: 20px;
+        font-size: 12px;
         margin-left: 20px;
+        font-weight: 800;
        
     }
 
@@ -1499,7 +1542,8 @@
 
     a.fossil {
         margin-left: 10px;
-        font-size: 20px;
+        font-size: 15px;
+        font-weight: 800;
     }
 
     a:link, a:hover, a:active, a:visited {
